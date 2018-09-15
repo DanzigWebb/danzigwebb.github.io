@@ -207,6 +207,7 @@ body {
   line-height: 1.6;
   font-family: "Montserrat", sans-serif;
   color: #666;
+  overflow-x: hidden;
   -webkit-font-smoothing: antialiased;
   -webkit-text-size-adjust: 100%; }
 
@@ -268,7 +269,8 @@ header {
 
 footer {
   background-color: #171F2A;
-  color: #fff; }
+  color: #fff;
+  width: 100%; }
   footer h3 {
     font-size: 1.5rem;
     font-weight: 400;
@@ -334,6 +336,9 @@ footer {
         background-color: #d95139; }
       footer .container .footleft .socmenu .fa-vk {
         background-color: #4879a1; }
+  @media (max-width: 480px) {
+    footer .container {
+      grid-template-columns: 1fr; } }
 
 .mainpage {
   display: grid;
@@ -426,22 +431,29 @@ footer {
     height: 600px; }
     .mainpage .second-slider .heading h2, .mainpage .second-slider .heading p {
       color: #fff; }
-    .mainpage .second-slider .grid {
+    .mainpage .second-slider .skill-links {
       display: grid;
       grid-template-columns: 1fr 1fr 1fr 1fr;
       max-width: 1170px;
       padding: 40px; }
-      .mainpage .second-slider .grid a {
+      .mainpage .second-slider .skill-links a {
         color: #fff;
         padding-left: 40px;
         font-size: 15px;
         transition: 0.6s;
         text-align: left; }
-      .mainpage .second-slider .grid a:hover {
+      .mainpage .second-slider .skill-links a:hover {
         color: #77C88B; }
-      .mainpage .second-slider .grid i {
+      .mainpage .second-slider .skill-links i {
         padding: 20px;
         padding-left: 10px; }
+  @media (max-width: 480px) {
+    .mainpage .container .skill-links {
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: repeat(4, 50px);
+      padding: 10px; }
+      .mainpage .container .skill-links a {
+        padding-left: 0; } }
   .mainpage .seo .sentence {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -456,6 +468,9 @@ footer {
       background: url(img/mainpage/seo.png);
       background-size: cover;
       min-height: 300px; }
+  @media (max-width: 480px) {
+    .mainpage .seo .sentence {
+      grid-template-columns: 1fr; } }
   .mainpage .slider-third {
     background-image: url(img/mainpage/bg-third.jpg);
     background-size: cover;
@@ -495,3 +510,8 @@ footer {
       background-image: url(img/mainpage/item3.png);
       background-size: cover;
       background-position: center; }
+  @media (max-width: 480px) {
+    .mainpage .mainjob .grid {
+      grid-template-columns: 1fr;
+      grid-template-rows: auto;
+      padding: 10px; } }
