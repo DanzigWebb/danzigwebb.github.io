@@ -335,9 +335,6 @@ footer {
       footer .container .footleft .socmenu .fa-vk {
         background-color: #4879a1; }
 
-header {
-  position: fixed; }
-
 .mainpage {
   display: grid;
   grid-gap: 80px; }
@@ -415,6 +412,13 @@ header {
         background-color: #FF6A53; }
       .mainpage .properties .skills .item .fa-paint-brush {
         background-color: #77C88B; }
+  @media (max-width: 480px) {
+    .mainpage .properties .skills {
+      grid-template-columns: 1fr;
+      grid-template-rows: repeat(6, 100px);
+      max-width: 80%; }
+      .mainpage .properties .skills p {
+        width: 75%; } }
   .mainpage .second-slider {
     background: url(img/mainpage/bg-second.jpg) no-repeat center;
     background-size: cover;
