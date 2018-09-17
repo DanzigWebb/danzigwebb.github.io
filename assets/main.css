@@ -636,3 +636,46 @@ hr {
 
   .whydo .grid {
     grid-template-columns: 1fr; } }
+.serv-second {
+  background: url(img/services/bg_cerv2.jpg) no-repeat center;
+  min-height: 600px; }
+  .serv-second .container {
+    padding-top: 50px; }
+  .serv-second .grid {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    margin-top: 20px;
+    grid-gap: 20px;
+    padding: 40px; }
+    .serv-second .grid .item1 {
+      background-color: #fff;
+      position: relative;
+      transition: 0.5s;
+      padding-bottom: 40px; }
+      .serv-second .grid .item1 img {
+        padding-top: 40px;
+        width: 50px;
+        display: block;
+        padding: 30px;
+        margin: auto; }
+      .serv-second .grid .item1 h5 {
+        margin-bottom: 15px; }
+      .serv-second .grid .item1 a {
+        position: absolute;
+        right: 40px;
+        color: #77C88B;
+        font-size: 30px;
+        transition: 0.6s;
+        bottom: 20px;
+        display: block; }
+      .serv-second .grid .item1 a:hover {
+        color: #FF6A53; }
+      .serv-second .grid .item1 p {
+        padding-bottom: 40px; }
+    .serv-second .grid .item1:hover {
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); }
+
+@media (max-width: 480px) {
+  .serv-second {
+    background-repeat: repeat; }
+    .serv-second .grid {
+      grid-template-columns: 1fr; } }
