@@ -401,25 +401,63 @@ hr {
   background: url(img/mainpage/bg-main.jpg) no-repeat center;
   background-size: cover;
   background-attachment: fixed;
-  height: 600px; }
+  height: 660px; }
   .main-slider p {
     font-size: 1.4em;
     font-weight: 200;
     margin-bottom: 30px;
     text-transform: uppercase;
-    letter-spacing: 2px; }
+    letter-spacing: 2px;
+    text-align: center; }
+  .main-slider .grid {
+    grid-template-columns: 1fr 2fr;
+    margin-top: 80px;
+    background-color: rgba(0, 0, 0, 0.88); }
+  .main-slider .heading {
+    padding: 20px; }
+    .main-slider .heading h3 {
+      font-size: 1.8em;
+      color: #fff;
+      text-transform: capitalize;
+      margin-bottom: 0; }
+    .main-slider .heading p {
+      color: #77C88B;
+      text-transform: lowercase;
+      font-size: 1.2em; }
+  .main-slider .bg-form {
+    padding: 40px; }
 
 @media (max-width: 480px) {
-  .main-slider {
-    height: 430px; }
-    .main-slider .container {
-      padding-top: 150px; }
-    .main-slider h1 {
-      font-size: 3em;
-      line-height: 1;
-      margin-bottom: 20px; }
-    .main-slider p {
-      font-size: 1.2em; } }
+  .main-slider .container {
+    padding-top: 150px; }
+  .main-slider h1 {
+    font-size: 3em;
+    line-height: 1;
+    margin-bottom: 20px; }
+  .main-slider p {
+    font-size: 1.2em; }
+  .main-slider .heading {
+    padding: 5px;
+    margin: 0; }
+    .main-slider .heading h3 {
+      margin: 0; }
+    .main-slider .heading p {
+      padding: 0;
+      font-size: 1.1em; }
+  .main-slider .grid {
+    width: 100%;
+    grid-template-columns: 1fr; } }
+@media (max-width: 768px) {
+  .main-slider .heading {
+    margin-top: 15px;
+    padding: 15px; }
+    .main-slider .heading h3 {
+      margin: 0;
+      line-height: 1; }
+    .main-slider .heading p {
+      padding: 5px;
+      font-size: 1.1em;
+      line-height: 1; } }
 .properties .skills {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
@@ -731,3 +769,36 @@ hr {
     background-repeat: repeat; }
     .serv-second .grid {
       grid-template-columns: 1fr; } }
+@media (max-width: 480px) {
+  .about .slider {
+    height: 320px; } }
+.about-serv p {
+  text-transform: none;
+  font-size: 1.2em; }
+.about-serv .grid {
+  grid-template-columns: 3fr 4fr;
+  grid-gap: 40px; }
+  .about-serv .grid .rtgrid {
+    background: url(img/about/macbook.png) center no-repeat;
+    background-size: contain; }
+  .about-serv .grid .heading {
+    text-align: left; }
+    .about-serv .grid .heading p {
+      margin-bottom: 20px; }
+    .about-serv .grid .heading .item {
+      text-align: left; }
+      .about-serv .grid .heading .item p {
+        text-transform: none;
+        font-size: 1em;
+        margin-bottom: 15px; }
+
+@media (max-width: 480px) {
+  .mainpage {
+    grid-gap: 20px; }
+    .mainpage .about-serv .grid {
+      grid-template-columns: 1fr;
+      padding: 10px; }
+      .mainpage .about-serv .grid .heading .item h5 {
+        font-weight: 600; }
+      .mainpage .about-serv .grid .heading .item p {
+        padding-top: 5px; } }
