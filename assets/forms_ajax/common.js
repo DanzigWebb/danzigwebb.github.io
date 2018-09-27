@@ -1,4 +1,4 @@
-$(document).ready(function() {
+$((document).ready(function() {
 
 	$("#form").submit(function() {
 		$.ajax({
@@ -13,4 +13,4 @@ $(document).ready(function() {
 		return false;
 	});
 	
-});
+}));

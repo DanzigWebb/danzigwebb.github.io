@@ -403,7 +403,7 @@ hr {
   display: table;
   margin: auto;
   text-align: center;
-  padding-top: 150px; }
+  padding-top: 200px; }
 
 .mainpage {
   display: grid;
@@ -413,20 +413,21 @@ hr {
   background: url(img/mainpage/bg-main.jpg) no-repeat center;
   background-size: cover;
   background-attachment: fixed;
-  height: 660px; }
+  min-height: 660px; }
   .main-slider p {
-    font-size: 1.4em;
-    font-weight: 200;
-    margin-bottom: 30px;
+    font-size: 1.2em;
+    font-weight: 300;
+    margin-bottom: 20px;
     text-transform: uppercase;
     letter-spacing: 2px;
     text-align: center; }
   .main-slider .grid {
     grid-template-columns: 1fr 2fr;
-    margin-top: 80px;
+    margin-top: 40px;
     background-color: rgba(0, 0, 0, 0.88); }
   .main-slider .heading {
-    padding: 20px; }
+    padding: 20px;
+    padding-top: 40px; }
     .main-slider .heading h3 {
       font-size: 1.8em;
       color: #fff;
@@ -437,8 +438,49 @@ hr {
       text-transform: lowercase;
       font-size: 1.2em; }
   .main-slider .bg-form {
-    padding: 40px; }
+    display: grid;
+    grid-template-columns: 2fr 2fr 1fr;
+    grid-gap: 10px;
+    height: 50px;
+    margin: auto; }
+    .main-slider .bg-form input {
+      border-radius: 30px;
+      padding-left: 20px;
+      padding-right: 40px;
+      background: #474343;
+      border: none; }
+    .main-slider .bg-form button {
+      border: none;
+      background: #77C88B;
+      color: #fff;
+      border-radius: 30px;
+      transition: 0.4s; }
+    .main-slider .bg-form button:hover {
+      background: #fff;
+      color: #000; }
 
+@media (max-width: 1000px) {
+  .main-slider .container h1 {
+    line-height: 1; }
+  .main-slider .grid {
+    grid-template-columns: 1fr 1fr;
+    padding: 20px; }
+  .main-slider .bg-form {
+    grid-template-columns: 1fr;
+    height: 150px; }
+    .main-slider .bg-form input {
+      height: 40px; } }
+@media (max-width: 768px) {
+  .main-slider .heading {
+    margin-top: 15px;
+    padding: 15px; }
+    .main-slider .heading h3 {
+      margin: 0;
+      line-height: 1; }
+    .main-slider .heading p {
+      padding: 5px;
+      font-size: 1.1em;
+      line-height: 1; } }
 @media (max-width: 480px) {
   .main-slider .container {
     padding-top: 150px; }
@@ -458,18 +500,14 @@ hr {
       font-size: 1.1em; }
   .main-slider .grid {
     width: 100%;
-    grid-template-columns: 1fr; } }
-@media (max-width: 768px) {
-  .main-slider .heading {
-    margin-top: 15px;
-    padding: 15px; }
-    .main-slider .heading h3 {
-      margin: 0;
-      line-height: 1; }
-    .main-slider .heading p {
-      padding: 5px;
-      font-size: 1.1em;
-      line-height: 1; } }
+    grid-template-columns: 1fr;
+    padding-left: 0;
+    padding-right: 0;
+    margin-top: 40px; }
+    .main-slider .grid button {
+      width: 120px;
+      margin: auto;
+      height: 40px; } }
 .properties .skills {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
@@ -519,18 +557,19 @@ hr {
 .second-slider {
   background: url(img/mainpage/bg-second.jpg) no-repeat center;
   background-size: cover;
+  background-position: top;
   background-attachment: fixed;
   height: 600px; }
+  .second-slider .container {
+    padding-top: 60px; }
   .second-slider .heading h2, .second-slider .heading p {
     color: #fff; }
   .second-slider .skill-links {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
-    max-width: 1170px;
     padding: 40px; }
     .second-slider .skill-links a {
       color: #fff;
-      padding-left: 40px;
       font-size: 15px;
       transition: 0.6s;
       text-align: left; }
@@ -792,9 +831,6 @@ hr {
     margin-bottom: 20px; }
   .serv-second .grid {
     grid-template-columns: 1fr; } }
-@media (max-width: 480px) {
-  .about .slider {
-    height: 320px; } }
 .about-serv p {
   text-transform: none;
   font-size: 1.2em; }
@@ -827,16 +863,18 @@ hr {
       padding: 10px; }
       .mainpage .about-serv .grid .heading .item h2 {
         font-size: 1.6rem; }
-      .mainpage .about-serv .grid .heading .item h5 {
-        font-weight: 600; }
       .mainpage .about-serv .grid .heading .item p {
         padding-top: 5px; } }
-.page-about .main-slider {
+.serv-second .grid h5 {
+  margin-top: 35px;
+  font-weight: 600; }
+
+.page-about .about-slider {
   background: url(img/about/bg_about.jpg) no-repeat center;
   background-size: cover;
   background-attachment: fixed;
   height: 460px; }
-  .page-about .main-slider .container {
+  .page-about .about-slider .container {
     padding-top: 200px; }
 
 .questions .grid .item {
@@ -860,8 +898,7 @@ hr {
   grid-row: 1/span 2; }
 .questions .grid .item3 .img {
   background: url(img/about/item3.png) center no-repeat;
-  background-size: contain;
-  background-position: bottom; }
+  background-size: contain; }
 
 @media (max-width: 480px) {
   .questions {
