@@ -2,34 +2,80 @@
 <html lang="ru">
 
 <head>
-  <title>Мой охуенный новый сайт</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="shortcut icon" href="/assets/img/favicons/favicon.ico">
   <link rel="stylesheet" href="/assets/main.css" />
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
   <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
-  <script src="script.js"></script>
+	<script>
+	 $(document).ready(function() {
+	    $("#my-menu").mmenu({
+	      extensions: [ 'effect-menu-slide', 'pagedim-black', "fx-listitems-fade", 'position-right' ],
+	      navbar: {
+	      	//title: '<img src="/assets/img/main/logo-1.png">'
+	      },
+	    }, {
+	       // configuration
+	       offCanvas: {
+	          pageSelector: "#my-page"
+	       }
+	    });
+
+	    var api = $('#my-menu').data('mmenu');
+	    api.bind('open:start', function() {
+	    	$('.hamburger').addClass('is-active');
+	    });
+	    api.bind('close:before', function() {
+	    	$('.hamburger').removeClass('is-active');
+	      })
+	   });
+	</script> 
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+
+
+
+  <script src="/mmenu/dist/jquery.mmenu.all.js"></script>
+	
+  <title>Мои услуги | создание и продвижение сайтов на WebruNN</title>
+  <meta name="description" content="Я предлагаю каждому воспользоваться услугами профессионального вебмастера в сфере SEO, копирайтинга и веб-разработки.">
+
 </head>
 
 
 <body>
 
-<header>
+<div id="my-page">
+	<header>
 	<div class='hedline'>
 		<a href='/' class='logo'> </a>
-		<nav>
-			<a href=''>Блог</a>
-			<a href=''>Контакты</a>
-			<a href=''>Порфолио</a>
+		<nav class="hedmenu">
+			<a href='/blog'>Блог</a>
+			<a href='/contacts'>Контакты</a>
+			<a href='/portfolio'>Порфолио</a>
 			<a href='/about'>Обо мне</a>
 			<a href="/services">Услуги</a>
+		</nav>
+
+		<a href="#my-menu" class="hamburger hamburger--spring">
+			<span class="hamburger-box"><span class="hamburger-inner"></span></span>
+		</a>
+
+		<nav id="my-menu">
+			<ul>
+	      <li> <a href="/"> Главная </a></li>
+	      <li> <a href="/services">Услуги</a></li>
+	      <li> <a href="/about/">Обо мне</a></li>
+	      <li> <a href='/portfolio'>Порфолио</a></li>
+	      <li> <a href='/contacts'>Контакты</a></li>
+	      <li> <a href='/blog'>Блог</a></li>
+  	 </ul>
 		</nav>
 	</div>
 
 </header>	
 
-<div class="serv-page">
+	<div class="serv-page">
 
 	<div class="slider serv-bg">
 		<div class="container">
@@ -47,16 +93,19 @@
 		<div class="grid">
 			<div class="leftgr">
 				<div class="item item1">
+					<i class="fas fa-graduation-cap"></i>
 					<h5>Подробная консультация</h5>
 					<p>Вы будете знать все, что я делаю, а также зачем и почему именно так</p>
 					<hr>
 				</div>
 				<div class="item item2">
+					<i class="fas fa-search"></i>
 					<h5>Регулярные отчеты</h5>
 					<p>Я буду предоставлять отчеты по проделанной работе</p>
 					<hr>
 				</div>
 				<div class="item item3">
+					<i class="fab fa-whmcs"></i>
 					<h5>Гарантированные правки</h5>
 					<p>Я доработаю проект, если вы не довольны результатом</p>
 				</div>
@@ -99,16 +148,37 @@
 		</div>
 	</div>
 
-	<section class="question">
-		<div class="heading">
-			<h2>3 Главных Вопроса</h2>
-			<p>Ответы на самые распространенные вопросы</p>
-			<hr>
+		<section class="help">
+		<div class="grid">
+			<div class="item item1">
+				<i class="fas fa-rocket"></i>
+				<h5>Ответ</h5>
+				<hr>
+				<p>В самые короткие сроки я отреагируем на Вашу заявку.</p>
+			</div>
+			<div class="item item2">
+				<i class="fas fa-graduation-cap"></i>
+				<h5>Консультация</h5>
+				<hr>
+				<p>Только конкретная информация по Вашим вопросам.</p>
+			</div>
+			<div class="item item3">
+				<i class="fas fa-search"></i>
+				<h5>Поиск</h5>
+				<hr>
+				<p>Я найду и расскажу Вам об оптимальных решениях.</p>
+			</div>
+			<div class="item item4">
+				<i class="fab fa-whmcs"></i>
+				<h5>Решение</h5>
+				<hr>
+				<p>После консультации я готов начать решение проблем.</p>
+			</div>
 		</div>
 	</section>
 </div>
 
-<footer>
+	<footer>
   <div class="container">
     <div class="footleft">
       <div class="footlogo"></div>
@@ -137,8 +207,7 @@
   </div>
 </footer>
 
+</div>
 
-<script src="assets/js/functions.js" type="text/javascript"></script>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
 </body>
 </html>
