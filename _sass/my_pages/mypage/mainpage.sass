@@ -1,0 +1,317 @@
+
+
+.mainpage
+	display: grid
+	grid-gap: 80px
+	
+.main-slider
+	background: url(img/mainpage/bg-main.jpg) no-repeat center
+	background-size: cover
+	background-attachment: fixed
+	min-height: 660px
+	p
+		font-size: 1.2em
+		font-weight: 300
+		margin-bottom: 20px
+		text-transform: uppercase
+		letter-spacing: 2px
+		text-align: center
+	.grid
+		grid-template-columns: 1fr 2fr
+		margin-top: 40px
+		background-color: rgba(0, 0, 0, 0.88)
+	.heading
+		padding: 20px
+		padding-top: 40px
+		h3
+			font-size: 1.8em
+			color: $white
+			text-transform: capitalize
+			margin-bottom: 0
+		p
+			color: $green
+			text-transform: lowercase
+			font-size: 1.2em
+	.bg-form
+		display: grid
+		grid-template-columns: 2fr 2fr 1fr
+		grid-gap: 10px
+		height: 50px
+		margin: auto
+		input
+			border-radius: 30px
+			padding-left: 20px
+			padding-right: 40px
+			background: #474343
+			border: none
+		button
+			border: none
+			background: $green
+			color: #fff
+			border-radius: 30px
+			transition: 0.4s
+		button:hover
+			background: #fff
+			color: #000
+
+@media (max-width: 1000px)
+	.main-slider
+		.container
+			h1
+				line-height: 1
+		.grid
+			grid-template-columns: 1fr 1fr
+			padding: 20px
+		.bg-form
+			grid-template-columns: 1fr
+			height: 150px
+
+			input
+				height: 40px
+
+@media (max-width: 768px)
+	.main-slider
+		.heading
+			margin-top: 15px
+			padding: 15px
+			h3
+				margin: 0
+				line-height: 1
+			p
+				padding: 5px
+				font-size: 1.1em
+				line-height: 1
+
+@media (max-width: 480px)
+	.main-slider
+		.container
+			padding-top: 150px
+		h1
+			font-size: 3em
+			line-height: 1
+			margin-bottom: 20px
+		p
+			font-size: 1.2em
+		.heading
+			padding: 5px
+			margin: 0
+			h3
+				margin: 0
+			p
+				padding: 0
+				font-size: 1.1em
+		.grid
+			width: 100%
+			grid-template-columns: 1fr
+			padding-left: 0
+			padding-right: 0
+			margin-top: 40px
+			button
+				width: 120px
+				margin: auto
+				height: 40px
+
+
+
+
+
+.properties
+	.skills
+		display: grid
+		grid-template-columns: 1fr 1fr 1fr 
+		grid-gap: 10px
+		max-width: 1170px
+		margin: auto
+		margin-top: 40px
+		margin-bottom: 40px
+		padding: 10px
+
+		.item
+			text-align: left
+			h5,p
+				margin-left: 80px
+			p
+				font-size: 0.9rem
+			i
+				color: #fff
+				font-size: 30px
+				width: 65px
+				height: 65px
+				background-color: $blue
+				line-height: 65px
+				text-align: center
+				border-radius: 50%
+				box-shadow: inset 0 -5px 0 0 rgba(0, 0, 0, 0.15)
+				margin-right: 10px
+				position: absolute
+				margin-top: 10px
+
+			.fa-font, .fa-greater-than
+				background-color: $yellow
+			.fa-chart-pie, .fa-search
+				background-color: $red
+			.fa-paint-brush
+				background-color: $green
+
+@media (max-width: 480px)
+	.properties
+		.skills
+			grid-template-columns: 1fr
+			grid-template-rows: repeat(6, 100px)
+			.item
+				i
+					margin-top: 20px
+					font-size: 20px
+					width: 50px
+					height: 50px
+					line-height: 50px
+					left: 25px
+
+
+
+.second-slider
+	background: url(img/mainpage/bg-second.jpg) no-repeat center
+	background-size: cover
+	background-position: top
+	background-attachment: fixed
+	height: 600px
+	.container
+		padding-top: 60px
+
+	.heading
+		h2, p
+			color: #fff
+
+	.skill-links
+		display: grid
+		grid-template-columns: 1fr 1fr 1fr 1fr
+		padding: 40px
+		a
+			color: $white
+			font-size: 15px
+			transition: 0.6s
+			text-align: left
+		a:hover
+			color: $green
+		i
+			padding: 20px
+			padding-left: 10px
+
+@media (max-width: 768px)
+	.container
+		padding-top: 100px
+		.skill-links
+			grid-template-columns: 1fr 1fr
+			grid-template-rows: repeat(4, 50px)
+			padding: 10px
+			margin-bottom: 20px
+			max-width: 360px
+			margin: auto
+			padding-top: 40px
+			padding-bottom: 40px
+			a
+				padding-left: 0
+	.second-slider
+		background-position: right
+
+.seo
+	.sentence
+		display: grid
+		grid-template-columns: 1fr 1fr
+		padding: 10px
+		max-width: 1170px
+		margin: auto
+		.sentence-left
+			text-align: left
+			p
+				margin-bottom: 40px
+		.sentence-right
+			background: url(img/mainpage/seo.png)
+			background-size: cover
+			min-height: 300px
+
+@media (max-width: 480px)
+	.seo
+		.sentence
+			grid-template-columns: 1fr
+			padding: 30px
+			h5
+				margin-bottom: 20px
+			.sentence-right
+				display: none
+	.button
+		display: block
+		width: 60%
+		padding: 8px 35px
+		margin: auto
+		text-align: center
+
+.slider-third
+	background-image: url(img/mainpage/bg-third.jpg)
+	background-size: cover
+	background-attachment: fixed
+	min-height: 500px
+	h2, p
+		color: $white
+		span
+			color: $green
+	p
+		padding-top: 10px
+		margin: 0
+	hr
+		margin-bottom: 40px
+
+
+.mainjob
+	.heading
+		margin-bottom: 40px
+	.grid
+		display: grid
+		grid-template-columns: 1fr 1fr 1fr
+		grid-template-rows: 300px 100px
+		grid-gap: 20px
+		max-width: 1170px
+		margin: auto
+		margin-bottom: 40px
+
+		.hid
+			line-height: 1
+			color: $black
+
+		.img1
+			background-image: url(img/mainpage/item1.png)
+			background-size: cover
+			background-position: center
+		.img2
+			background-image: url(img/mainpage/item2.png)
+			background-size: cover
+			background-position: center
+		.img3
+			background-image: url(img/mainpage/item3.png)
+			background-size: cover
+			background-position: center
+
+@media (max-width: 480px)
+	.mainjob
+		.grid
+			grid-template-columns: 1fr
+			grid-template-rows: auto
+			padding: 10px
+			.img1, .img2, .img3
+				display: none
+			h3
+				font-size: 1.8em
+			p
+				font-size: 1.4em
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,82 @@
+@import 
+	'../../mixins',
+	'../../variables';
+
+
+@if ( $mm_opt_toggles )
+{
+	label.mm-toggle
+	{
+		border-radius: $mm_toggleHeight;
+		min-width: $mm_toggleWidth;
+		width: $mm_toggleWidth;
+		height: $mm_toggleHeight;
+		margin: 0 $mm_padding;
+		margin-top: ($mm_btnSize - $mm_toggleHeight) / 2;
+		margin-top: calc( ( var( --mm-listitem-size ) - #{$mm_toggleHeight} ) / 2 );
+
+		&:before
+		{
+			content: '';
+			display: block;
+			border-radius: $mm_toggleHeight;
+			width: $mm_toggleHeight - 2;
+			height: $mm_toggleHeight - 2;
+			margin: 1px;
+		}
+	}
+	input.mm-toggle
+	{
+		position: absolute;
+		left: -10000px;
+	}
+	input.mm-toggle:checked ~ label.mm-toggle:before
+	{
+		float: right;
+	}
+}
+
+@if ( $mm_opt_checks )
+{
+	label.mm-check
+	{
+		width: $mm_checkWidth;
+		height: $mm_checkHeight;
+
+		&:before
+		{
+			content: '';
+			display: block;
+			border-left: 3px solid;
+			border-bottom: 3px solid;
+			width: 40%;
+			height: 20%;
+			margin: 25% 0 0 20%;
+			opacity: 0.1;
+
+			transform: rotate( -45deg );
+		}
+	}
+	input.mm-check
+	{
+		position: absolute;
+		left: -10000px;
+	}
+	input.mm-check:checked ~ label.mm-check:before
+	{
+		opacity: 1;
+	}
+}
+
+
+@if ( $mm_opt_toggles )
+{
+	@include mm_toggles_colors;
+}
+@if ( $mm_opt_checks )
+{
+	@include mm_checks_colors;
+}
+
+@import 'toggles.rtl';
+

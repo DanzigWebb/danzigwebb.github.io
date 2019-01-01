@@ -1,0 +1,98 @@
+//	Colors
+@mixin mm_colors( $cls: ".mm-menu",
+	$baseBg: $mm_backgroundColor,
+	$color: $mm_textColor, $dimmedColor: $mm_dimmedTextColor,
+	$emphasizedBg: $mm_emphasizedBackgroundColor, $highlightedBg: $mm_highlightedBackgroundColor,
+	$borderColor: $mm_borderColor,
+	$navbarColor: $mm_navbarColor
+) {
+	#{$cls}
+	{
+		background: $baseBg;
+		border-color: $borderColor;
+		color: $color;
+
+		.mm-navbar
+		{
+			color: $navbarColor;
+		}
+
+		.mm-btn_next:after,
+		.mm-btn_prev:before,
+		.mm-btn_close:before,
+		.mm-btn_close:after
+		{
+			border-color: $navbarColor;
+		}
+
+		.mm-listview
+		{
+			.mm-btn_next:after
+			{
+				border-color: $dimmedColor;
+			}
+
+			a:not( .mm-btn_next )
+			{
+				-webkit-tap-highlight-color: $emphasizedBg;
+				tap-highlight-color: $emphasizedBg;
+			}
+		}
+
+		.mm-listitem_selected
+		{
+			> .mm-listitem__text
+			{
+				background: $emphasizedBg;
+			}
+		}
+
+		.mm-listitem_opened
+		{
+			> .mm-listitem__btn,
+			> .mm-panel
+			{
+				background: $highlightedBg;
+			}
+		}
+
+		.mm-listitem_divider 
+		{
+			background: $highlightedBg;
+		}
+	}
+}
+
+
+// Arrow buttons
+@mixin mm_btn_arrow_prev
+{
+	transform: rotate( -45deg );
+	left: $mm_listitemIndent + 3;
+	right: auto;
+}
+@mixin mm_btn_arrow_next
+{
+	transform: rotate( 135deg );
+	right: $mm_listitemIndent + 3;
+	left: auto;
+}
+
+
+
+//	Misc
+@mixin mm_ellipsis()
+{
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	overflow: hidden;
+}
+@mixin mm_clearfix()
+{
+	&:after
+	{
+		content: '';
+		display: block;
+		clear: both;
+	}
+}

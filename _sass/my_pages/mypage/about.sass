@@ -1,0 +1,155 @@
+
+
+.about-serv
+	p
+		text-transform: none
+		font-size: 1.2em
+	.grid
+		grid-template-columns: 3fr 4fr
+		grid-gap: 40px
+		padding: 10px
+		.rtgrid
+			background: url(img/about/macbook.png) center no-repeat
+			background-size: contain
+		.heading
+			text-align: left
+			p
+				margin-bottom: 20px
+				max-width: 85%
+			.item
+				text-align: left
+				p
+					text-transform: none
+					font-size: 1.2em
+					line-height: 1.3
+					margin-bottom: 15px
+					margin-top: 20px
+
+@media (max-width: 1000px)
+	.mainpage
+		grid-gap: 40px
+		.about-serv
+			.grid
+				grid-template-columns: 1fr
+				padding: 10px
+				.heading
+					.item
+						h2
+							font-size: 1.6rem
+						p
+							padding-top: 5px
+
+.serv-second
+	.grid
+		h5
+			margin-top: 35px
+			font-weight: 600
+
+.page-about
+	.about-slider
+		background: url(img/about/bg_about.jpg) no-repeat center
+		background-size: cover
+		background-attachment: fixed
+		height: 460px
+		.container
+			padding-top: 200px
+
+
+.questions
+	.grid
+		.item
+			display: grid
+			grid-template-columns: 1fr 1fr
+			.minheading
+				text-align: left
+				padding: 60px
+				padding-left: 40px
+				h5
+					margin-bottom: 20px
+				p
+					margin-bottom: 60px
+					text-align: justify
+		.item1
+			.img
+				background: url(img/about/item1.png) center no-repeat
+				background-size: contain
+		.item2
+			.img
+				background: url(img/about/item2.png) center no-repeat
+				background-size: contain
+				grid-row: 1/span 2
+		.item3
+			.img
+				background: url(img/about/item3.png) center no-repeat
+				background-size: contain
+
+
+@media (max-width: 480px)
+	.questions
+		padding-bottom: 40px
+		.grid
+			.item
+				grid-template-columns: 1fr
+				.minheading
+					padding: 20px
+			.item2
+				.img
+					grid-row: 2/span 3
+
+.achiev
+	margin-top: -80px
+	padding: 80px
+	background-color: #0082C7
+	.grid
+		grid-template-columns: 1fr 1fr 1fr 1fr
+		.item
+			h5
+				color: #fff
+				font-size: 4em
+				font-weight: 700
+				line-height: 1
+			p
+				color: #fff
+
+@media (max-width: 768px)
+	.achiev
+		margin-top: 0
+		padding: 25px
+		.grid
+			grid-template-columns: 1fr 1fr
+			grid-gap: 40px
+
+.help
+	.grid
+		grid-template-columns: 1fr 1fr 1fr 1fr
+		margin-bottom: 80px
+		grid-gap: 10px
+		.item
+			padding: 10px
+			.fas, .fab
+				font-size: 4em
+				padding-bottom: 25px
+		.fa-rocket
+			color: #FDC106
+		.fa-graduation-cap
+			color: #4AB0D3
+		.fa-search
+			color: #41CB84
+		.fa-whmcs
+			color: #ED6852
+
+@media (max-width: 880px)
+	.help
+		.grid
+			grid-template-columns: 1fr 1fr
+		.item
+			padding: 20px
+			p
+				width: 90%
+				margin: auto
+
+@media (max-width: 480px)
+	.help
+		.grid
+			grid-template-columns: 1fr
+			margin-bottom: 40px

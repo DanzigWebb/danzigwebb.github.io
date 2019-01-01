@@ -1,74 +1,8 @@
-<!DOCTYPE html>
-<html lang="ru"><head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="shortcut icon" href="/assets/img/favicons/favicon.ico">
-  <link rel="stylesheet" href="/assets/main.css" />
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
-  <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
-	<script>
-	 $(document).ready(function() {
-	    $("#my-menu").mmenu({
-	      extensions: [ 'effect-menu-slide', 'pagedim-black', "fx-listitems-fade", 'position-right' ],
-	      navbar: {
-	      	//title: '<img src="/assets/img/main/logo-1.png">'
-	      },
-	    }, {
-	       // configuration
-	       offCanvas: {
-	          pageSelector: "#my-page"
-	       }
-	    });
+---
+layout: default
+---
 
-	    var api = $('#my-menu').data('mmenu');
-	    api.bind('open:start', function() {
-	    	$('.hamburger').addClass('is-active');
-	    });
-	    api.bind('close:before', function() {
-	    	$('.hamburger').removeClass('is-active');
-	      })
-	   });
-	</script> 
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
-
-
-
-  <script src="/mmenu/dist/jquery.mmenu.all.js"></script>
-	
-  <title>Your awesome title | создание и продвижение сайтов на WebruNN</title>
-  <meta name="description" content="">
-
-</head>
-<body><header>
-	<div class='hedline'>
-		<a href='/' class='logo'> </a>
-		<nav class="hedmenu">
-			<a href='/blog'>Блог</a>
-			<a href='/contacts'>Контакты</a>
-			<a href='/portfolio'>Порфолио</a>
-			<a href='/about'>Обо мне</a>
-			<a href="/services">Услуги</a>
-		</nav>
-
-		<a href="#my-menu" class="hamburger hamburger--spring">
-			<span class="hamburger-box"><span class="hamburger-inner"></span></span>
-		</a>
-
-		<nav id="my-menu">
-			<ul>
-	      <li> <a href="/"> Главная </a></li>
-	      <li> <a href="/services">Услуги</a></li>
-	      <li> <a href="/about/">Обо мне</a></li>
-	      <li> <a href='/portfolio'>Порфолио</a></li>
-	      <li> <a href='/contacts'>Контакты</a></li>
-	      <li> <a href='/blog'>Блог</a></li>
-  	 </ul>
-		</nav>
-	</div>
-
-</header>	<main class="page-content" aria-label="Content">
-      <div class="wrapper">
-        <style type="text/css" media="screen">
+<style type="text/css" media="screen">
   .container {
     margin: 10px auto;
     max-width: 600px;
@@ -88,36 +22,3 @@
   <p><strong>Page not found :(</strong></p>
   <p>The requested page could not be found.</p>
 </div>
-
-      </div>
-    </main><footer>
-  <div class="container">
-    <div class="footleft">
-      <div class="footlogo"></div>
-      <p class='ftabout'>Я занимаюсь оптимизацией сайтов уже более 5 лет и готов поделиться опытом.</p>
-      <div class="flcontact">
-        <p><i class="fas fa-map-marker-alt"></i>Санкт-Петербург</p>
-        <p><i class="fas fa-phone"></i>7 777 77 77</p>
-        <p><i class="fas fa-envelope"></i>webrunn@gmail.com</p>
-      </div>
-      <div class="socmenu">
-        <a href="#"><i class="fab fa-facebook-f"></i></a>
-        <a href="#"><i class="fab fa-google"></i></a>
-        <a href="#"><i class="fab fa-vk"></i></a>
-      </div>
-    </div>
-
-    <div class="footcenter">
-      <h3>Последние записи</h3><hr>
-      <p>Познакомьтесь с последними постами</p>
-    </div>
-
-    <div class="footright">
-      <h3>Напишите мне</h3><hr>
-      <p>Я отвечу на все возникшие вопросы</p>
-    </div>
-  </div>
-</footer>
-</body>
-
-</html>

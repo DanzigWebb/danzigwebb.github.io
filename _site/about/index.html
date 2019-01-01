@@ -1,50 +1,204 @@
 <!DOCTYPE html>
-<html lang="en"><head>
-  <title>Мой охуенный новый сайт</title>
+<html lang="ru">
+
+<head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="shortcut icon" href="/assets/img/favicons/favicon.ico">
   <link rel="stylesheet" href="/assets/main.css" />
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+
+	
+	<script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+  <script src="/mmenu/dist/jquery.mmenu.all.js"></script>
+	<script src="/assets/js/common.js"></script>
+
+
+  <title>Обо мне | создание и продвижение сайтов на WebruNN</title>
+  <meta name="description" content="">
+
 </head>
-<body><header>
+
+
+<body>
+
+<div id="my-page">
+<header>
 	<div class='hedline'>
-		<a href='' class='logo'> </a>
-		<nav>
-			<a href=''>Блог</a>
-			<a href=''>Контакты</a>
-			<a href=''>Порфолио</a>
-			<a href=''>Обо мне</a>
-			<a href=''>Услуги</a>
+		<a href='/' class='logo'> </a>
+		<nav class="hedmenu">
+			<a href='/blog'>Блог</a>
+			<a href='/contacts'>Контакты</a>
+			<a href='/portfolio'>Порфолио</a>
+			<a href='/about'>Обо мне</a>
+			<a href="/services">Услуги</a>
+		</nav>
+
+		<a href="#my-menu" class="hamburger hamburger--spring">
+			<span class="hamburger-box"><span class="hamburger-inner"></span></span>
+		</a>
+
+		<nav id="my-menu">
+			<ul>
+	      <li> <a href="/"> Главная </a></li>
+	      <li> <a href="/services">Услуги</a></li>
+	      <li> <a href="/about/">Обо мне</a></li>
+	      <li> <a href='/portfolio'>Порфолио</a></li>
+	      <li> <a href='/contacts'>Контакты</a></li>
+	      <li> <a href='/blog'>Блог</a></li>
+  	 </ul>
 		</nav>
 	</div>
+
 </header>	
-<main class="page-content" aria-label="Content">
-      <div class="wrapper">
-        <article class="post">
 
-  <header class="post-header">
-    <h1 class="post-title">About</h1>
-  </header>
+<div class="mainpage page-about">
 
-  <div class="post-content">
-    <p>This is the base Jekyll theme. You can find out more info about customizing your Jekyll theme, as well as basic Jekyll usage documentation at <a href="https://jekyllrb.com/">jekyllrb.com</a></p>
+	<div class="about">
+		<div class="slider about-slider">
+			<div class="container">
+				<h1>Обо Мне</h1>
+				<p>Узнайте. как мы будем работать</p>
+			</div>
+		</div>
+	</div>
 
-<p>You can find the source code for Minima at GitHub:
-<a href="https://github.com/jekyll">jekyll</a> /
-<a href="https://github.com/jekyll/minima">minima</a></p>
+		<section class="about-serv">
+		<div class="grid">
+			<div class="rtgrid"></div>
+			<div class="heading">
+			<h2>Многолетний опыт на вашей службе</h2>
+			<p>Я предлагаю только самые актуальные решения в соответствии с реалиями текущих тенденций.</p>
+				<div class="item item1">
+					<h5>Подробная консультация</h5>
+					<p>Вы будете знать все, что я делаю, а также зачем и почему именно так</p>
+				</div>
+				<div class="item item2">
+					<h5>Регулярные отчеты</h5>
+					<p>Я буду предоставлять отчеты по проделанной работе</p>
+				</div>
+				<div class="item item3">
+					<h5>Гарантированные правки</h5>
+					<p>Я доработаю проект, если вы не довольны результатом</p>
+			</div>
+		</div>
+	</section>
 
-<p>You can find the source code for Jekyll at GitHub:
-<a href="https://github.com/jekyll">jekyll</a> /
-<a href="https://github.com/jekyll/jekyll">jekyll</a></p>
+	<div class="slider serv-second">
+		<div class="container">
+			<h2>Мои главные навыки</h2>
+			<p>5 лет опыта накопленных знаний</p>
+			<hr>
+		</div>
+		<div class="grid">
+			<div class="item">
+				<div class="bearsthemes-element bearsthemes-piechart-item-element ">
+				<div class="item-wrap">
+				<div data-bears-piechart="{&quot;color&quot;:&quot;hsl(148, 57%, 53%)&quot;,&quot;text_above&quot;:&quot;&quot;,&quot;text_below&quot;:&quot;%&quot;,&quot;number_pie&quot;:&quot;50&quot;,&quot;duration&quot;:&quot;1500&quot;}" style="width: 200px; height: 200px; position: relative; margin: auto; background: white;border-radius: 100px; " class="pie-chart-container"><svg viewBox="0 0 100 100" style="display: block; width: 100%;"><path d="M 50,50 m 0,-47.5 a 47.5,47.5 0 1 1 0,95 a 47.5,47.5 0 1 1 0,-95" stroke="#eee" stroke-width="5" fill-opacity="0"></path><path d="M 50,50 m 0,-47.5 a 47.5,47.5 0 1 1 0,95 a 47.5,47.5 0 1 1 0,-95" stroke="hsl(148, 57%, 53%)" stroke-width="4" fill-opacity="0" style="stroke-dasharray: 298.493, 298.493;stroke-dashoffset: 149.247;"></path></svg><div class="progressbar-text" style="position: absolute; left: 50%; top: 50%; padding: 0px; margin: 0px; transform: translate(-50%, -50%); color: rgb(67, 203, 131); font-family: Montserrat; font-size: 2rem; font-weight: 700;">50%</div></div><h5 class="piechart-title" style="text-align: center;">Web Аналитика</h5></div></div></div>
+			<div class="item">
+				<div class="bearsthemes-element bearsthemes-piechart-item-element ">
+				<div class="item-wrap">
+				<div data-bears-piechart="{&quot;color&quot;:&quot;hsl(45, 100%, 65%)&quot;,&quot;text_above&quot;:&quot;&quot;,&quot;text_below&quot;:&quot;%&quot;,&quot;number_pie&quot;:&quot;33&quot;,&quot;duration&quot;:&quot;1500&quot;}" style="width: 200px; height: 200px; position: relative; margin: auto; background: white;border-radius: 100px; " class="pie-chart-container"><svg viewBox="0 0 100 100" style="display: block; width: 100%;"><path d="M 50,50 m 0,-47.5 a 47.5,47.5 0 1 1 0,95 a 47.5,47.5 0 1 1 0,-95" stroke="#eee" stroke-width="5" fill-opacity="0"></path><path d="M 50,50 m 0,-47.5 a 47.5,47.5 0 1 1 0,95 a 47.5,47.5 0 1 1 0,-95" stroke="hsl(45, 100%, 65%)" stroke-width="4" fill-opacity="0" style="stroke-dasharray: 298.493, 298.493; stroke-dashoffset: 199.99;"></path></svg><div class="progressbar-text" style="position: absolute; left: 50%; top: 50%; padding: 0px; margin: 0px; transform: translate(-50%, -50%); color: rgb(255, 210, 77); font-family: Montserrat; font-size: 2rem; font-weight: 700;">33%</div></div><h5 class="piechart-title" style="text-align: center;">SEO</h5></div></div></div>
+			<div class="item">
+				<div class="bearsthemes-element bearsthemes-piechart-item-element ">
+				<div class="item-wrap">
+				<div data-bears-piechart="{&quot;color&quot;:&quot;hsl(10, 86%, 63%)&quot;,&quot;text_above&quot;:&quot;&quot;,&quot;text_below&quot;:&quot;%&quot;,&quot;number_pie&quot;:&quot;55&quot;,&quot;duration&quot;:&quot;1500&quot;}" style="width: 200px; height: 200px; position: relative; margin: auto; background: white;border-radius: 100px; " class="pie-chart-container"><svg viewBox="0 0 100 100" style="display: block; width: 100%;"><path d="M 50,50 m 0,-47.5 a 47.5,47.5 0 1 1 0,95 a 47.5,47.5 0 1 1 0,-95" stroke="#eee" stroke-width="5" fill-opacity="0"></path><path d="M 50,50 m 0,-47.5 a 47.5,47.5 0 1 1 0,95 a 47.5,47.5 0 1 1 0,-95" stroke="hsl(10, 86%, 63%)" stroke-width="4" fill-opacity="0" style="stroke-dasharray: 298.493, 298.493; stroke-dashoffset: 134.322;"></path></svg><div class="progressbar-text" style="position: absolute; left: 50%; top: 50%; padding: 0px; margin: 0px; transform: translate(-50%, -50%); color: rgb(242, 107, 80); font-family: Montserrat; font-size: 2rem; font-weight: 700;">55%</div></div><h5 class="piechart-title" style="text-align: center;">Верстка</h5></div></div></div>
+			<div class="item">
+				<div class="bearsthemes-element bearsthemes-piechart-item-element ">
+				<div class="item-wrap">
+				<div data-bears-piechart="{&quot;color&quot;:&quot;hsl(187, 65%, 50%)&quot;,&quot;text_above&quot;:&quot;&quot;,&quot;text_below&quot;:&quot;%&quot;,&quot;number_pie&quot;:&quot;89&quot;,&quot;duration&quot;:&quot;1500&quot;}" style="width: 200px; height: 200px; position: relative; margin: auto; background: white;border-radius: 100px; " class="pie-chart-container"><svg viewBox="0 0 100 100" style="display: block; width: 100%;"><path d="M 50,50 m 0,-47.5 a 47.5,47.5 0 1 1 0,95 a 47.5,47.5 0 1 1 0,-95" stroke="#eee" stroke-width="5" fill-opacity="0"></path><path d="M 50,50 m 0,-47.5 a 47.5,47.5 0 1 1 0,95 a 47.5,47.5 0 1 1 0,-95" stroke="hsl(187, 65%, 50%)" stroke-width="4" fill-opacity="0" style="stroke-dasharray: 298.493, 298.493; stroke-dashoffset: 32.8343;"></path></svg><div class="progressbar-text" style="position: absolute; left: 50%; top: 50%; padding: 0px; margin: 0px; transform: translate(-50%, -50%); color: rgb(45, 191, 210); font-family: Montserrat; font-size: 2rem; font-weight: 700;">89%</div></div><h5 class="piechart-title" style="text-align: center;">Копирайтинг</h5></div></div></div>
+		</div>
+	</div>
 
+	<section class="questions">
+		<div class="heading">
+			<h2>3 главных вопроса</h2>
+			<p>ответы на самые распространенные вопросы</p>
+			<hr>
+		</div>
+		<div class="grid">
+			<div class="item item1">
+				<div class="minheading">
+					<h5>Как мне контролировать работу?</h5>
+					<p>При согласовании работ мы обязательно составим четкое техническое задание, чтобы в будущем не возникло проблем с недопониманием и вы получили ровно то, что ожидали за оговоренную стоимость.</p>
+					<a href="#" class="button">Подробнее</a>
+				</div>
+				<div class="img"></div>
+			</div>
 
-  </div>
+			<div class="item item2">
+				<div class="minheading">
+					<h5>Через какое время сайт будет в топе?</h5>
+					<p>Гарантии давать практически невозможно. Здесь требуется работа, учитывающая огромное количество деталей: начиная от дизайна и удобства сайта, заканчивая контентом и позиционированием, а также востребовательностью на рынке услуг.</p>
+					<a href="#" class="button">Подробнее</a>
+				</div>
+				<div class="img"></div>
+			</div>
 
-</article>
+			<div class="item item3">
+				<div class="minheading">
+					<h5>Как скоро мой сайт начнет продавать?</h5>
+					<p>Это сильно зависит от способа монетизации сайта. В любом случае, сайт продает если у него есть трафик с потенциальными покупателями, предложения вашего бизнеса конкурентоспособны, а у сайта высокие показатели конверсии.</p>
+					<a href="#" class="button">Подробнее</a>
+				</div>
+				<div class="img"></div>
+			</div>
+		</div>
+	</section>
 
-      </div>
-    </main><footer>
+	<section class="achiev">
+		<div class="grid">
+			<div class="item">
+				<h5>5</h5>
+				<p>Лет опыта</p>
+			</div>
+			<div class="item">
+				<h5>1329</h5>
+				<p>Статьи</p>
+			</div>
+			<div class="item">
+				<h5>43</h5>
+				<p>Макета</p>
+			</div>
+			<div class="item">
+				<h5>13</h5>
+				<p>Сайтов</p>
+			</div>
+		</div>
+	</section>
+	<section class="help">
+		<div class="grid">
+			<div class="item item1">
+				<i class="fas fa-rocket"></i>
+				<h5>Ответ</h5>
+				<hr>
+				<p>В самые короткие сроки я отреагируем на Вашу заявку.</p>
+			</div>
+			<div class="item item2">
+				<i class="fas fa-graduation-cap"></i>
+				<h5>Консультация</h5>
+				<hr>
+				<p>Только конкретная информация по Вашим вопросам.</p>
+			</div>
+			<div class="item item3">
+				<i class="fas fa-search"></i>
+				<h5>Поиск</h5>
+				<hr>
+				<p>Я найду и расскажу Вам об оптимальных решениях.</p>
+			</div>
+			<div class="item item4">
+				<i class="fab fa-whmcs"></i>
+				<h5>Решение</h5>
+				<hr>
+				<p>После консультации я готов начать решение проблем.</p>
+			</div>
+		</div>
+	</section>
+
+</div>
+
+<footer>
   <div class="container">
     <div class="footleft">
       <div class="footlogo"></div>
@@ -72,6 +226,8 @@
     </div>
   </div>
 </footer>
-</body>
 
+</div>
+
+</body>
 </html>

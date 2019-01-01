@@ -1,0 +1,60 @@
+header
+	width: 100%
+	background: rgba(119, 200, 139, 0.7)
+	position: fixed
+	z-index: 99999
+
+.hedline
+	position: relative
+	display: grid
+	grid-template-columns: 1fr 4fr 1fr
+	grid-template-rows: 80px
+	grid-gap: 5px
+	max-width: 1280px
+	margin: auto
+	.hamburger
+		margin: auto
+		display: none
+	.hedmenu
+		float: right
+		padding: 18px 40px 12px
+		line-height: 50px
+		a
+			display: inline-block
+			float: right
+			color: #fff
+			text-transform: uppercase
+			margin-right: 40px
+			font-weight: 700
+			transition: 0.6s
+		a:hover
+			color: $red
+
+.logo
+	position: relative
+	background: url(img/main/logo-1.png)
+	background-repeat: no-repeat
+	top: 15px
+	left: 40px
+
+
+
+.hamburger-box
+	.hamburger-inner, .hamburger-inner::before, .hamburger-inner::after
+		border-radius: 1px
+		background-color: #fff
+		width: 30px
+		height: 3px
+
+
+// стилизация мменю
+
+
+
+@media (max-width: 1100px)
+	.hedline
+		grid-template-columns: 1fr 1fr
+		nav
+			display: none
+		.hamburger
+			display: block
