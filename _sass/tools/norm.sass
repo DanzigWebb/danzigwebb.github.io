@@ -1,0 +1,78 @@
+.accent-color
+  color: $accent
+
+.container1100
+  max-width: 1070px
+  margin: auto
+  padding-right: $gatter
+  padding-left: $gatter
+
+.row
+  display: flex
+  flex-direction: row
+  padding: $gatter
+
+
+
+
+h2 
+  text-transform: none
+  font-weight: 500
+  font-size: 40px
+
+h3
+  font-weight: 500
+  margin-bottom: $gatter
+  font-size: 30px
+h4 
+  font-weight: 500
+  font-size: 21px
+h5
+  font-weight: 500
+  margin-bottom: $gatter
+  font-size: 18px
+
+
+
+
+
+
+
+
+
+
+/////////////////////////////////////////////////////
+// Круговые диаграммы
+////////////////////////////////////////////////////
+.circle
+  display: block
+  float: left
+  position: relative
+circle 
+  fill: rgba(0,0,0,0)
+  stroke: #eee
+  stroke-width: 8
+  stroke-dasharray: 408px 408px
+
+circle:nth-child(2n)
+  fill: rgba(0,0,0,0)
+  stroke: #af8652
+  stroke-width: 8
+
+.circle78:before
+  content: "78 %"
+.circle88:before
+  content: "88 %"
+.circle84:before
+  content: "84 %"
+.circle83:before
+  content: "83 %"
+
+
+.circle:before
+  position: absolute
+  font-size: 26px
+  left: 34%
+  top: 40%
+
+  
