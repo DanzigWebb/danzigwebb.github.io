@@ -1,20 +1,19 @@
 header
 	width: 100%
-	background: rgba(119, 200, 139, 0.7)
-	position: fixed
-	z-index: 99999
+	background: #363636
 
 .hedline
 	position: relative
 	display: grid
-	grid-template-columns: 1fr 4fr 1fr
+	grid-template-columns: 1fr 1fr
 	grid-template-rows: 80px
 	grid-gap: 5px
 	max-width: 1280px
 	margin: auto
 	.hamburger
-		margin: auto
-		display: none
+		justify-self: end
+		display: grid
+		align-items: center
 	.hedmenu
 		float: right
 		padding: 18px 40px 12px
@@ -25,10 +24,10 @@ header
 			color: #fff
 			text-transform: uppercase
 			margin-right: 40px
-			font-weight: 700
+			font-weight: 400
 			transition: 0.6s
 		a:hover
-			color: $red
+			color: $accent
 
 .logo
 	position: relative
@@ -51,10 +50,3 @@ header
 
 
 
-@media (max-width: 1100px)
-	.hedline
-		grid-template-columns: 1fr 1fr
-		nav
-			display: none
-		.hamburger
-			display: block
