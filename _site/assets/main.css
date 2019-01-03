@@ -335,7 +335,6 @@ a {
   letter-spacing: 4px;
   font-size: 17px;
   transition: ease 0.5s;
-  line-height: 44px;
   padding: 13px 35px;
   text-transform: uppercase;
   border: 4px #fff solid; }
@@ -498,16 +497,15 @@ footer {
       grid-gap: 25px; }
       footer .container .footleft .ftabout {
         padding-left: 20px; } }
-  @media (max-width: 480px) {
+  @media (max-width: 580px) {
     footer .container {
-      grid-template-columns: 1fr; } }
+      grid-template-columns: 1fr; }
+    footer footer h3 {
+      word-spacing: 5px; } }
 
 @media (max-width: 880px) {
   footer h3 {
-    word-spacing: 200px; } }
-@media (max-width: 480px) {
-  footer h3 {
-    word-spacing: 5px; } }
+    word-spacing: 400px; } }
 .second-heading {
   display: grid;
   background: url(img/main/bgforsection.jpg) repeat center;
@@ -548,7 +546,7 @@ footer {
     line-height: 1; } }
 @media (max-width: 480px) {
   .main-slider h1 {
-    font-size: 45px;
+    font-size: 35px;
     line-height: 1;
     margin-bottom: 10px; }
   .main-slider .heading p {
@@ -667,6 +665,9 @@ footer {
     grid-template-columns: 1fr; }
     .my-best .line-heading {
       margin-bottom: 15px; } }
+@media (max-width: 330px) {
+  .my-best .grid {
+    grid-template-columns: 1fr; } }
 .my-services {
   position: relative; }
   .my-services h2 {
@@ -722,6 +723,28 @@ footer {
     top: -60px; }
   .my-services h2 {
     margin-bottom: 100px; } }
+.line-trigger {
+  background-color: #af8652; }
+  .line-trigger .content {
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    grid-gap: 10px;
+    grid-template-rows: 40px;
+    align-items: center;
+    padding: 15px; }
+    .line-trigger .content p {
+      justify-self: start;
+      color: #fff;
+      font-size: 20px;
+      font-weight: 500; }
+    .line-trigger .content .button {
+      justify-self: center; }
+
+@media (max-width: 480px) {
+  .line-trigger .content {
+    grid-template-columns: 1fr; }
+    .line-trigger .content p {
+      justify-self: center; } }
 @media (max-width: 480px) {
   body .serv-page {
     grid-gap: 20px; } }

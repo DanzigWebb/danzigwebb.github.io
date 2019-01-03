@@ -42,9 +42,13 @@ $(document).ready(function() {
     responsiveClass:true,
     responsive:{
         0:{
-            items:2,
+            items:1,
             nav:true
         },
+        400:{
+            items:2,
+            nav:true
+      },
         600:{
             items:3,
             nav:true

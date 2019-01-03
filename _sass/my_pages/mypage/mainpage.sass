@@ -38,7 +38,7 @@
 @media (max-width: 480px)
   .main-slider
     h1
-      font-size: 45px
+      font-size: 35px
       line-height: 1
       margin-bottom: 10px
     .heading
@@ -185,6 +185,10 @@
     .line-heading
       margin-bottom: $gatter
 
+@media (max-width: 330px)
+  .my-best
+    .grid
+      grid-template-columns: 1fr
 
 /////////////////////////////////////////////////////
 // Сервисы
@@ -258,3 +262,33 @@
       top: -60px
     h2
       margin-bottom: 100px
+
+
+/////////////////////////////////////////////////////
+// Тригер полоса
+////////////////////////////////////////////////////
+
+.line-trigger
+  background-color: $accent
+  .content
+    display: grid
+    grid-template-columns: 3fr 1fr
+    grid-gap: 10px
+    grid-template-rows: 40px
+    align-items: center
+    padding: $gatter
+    p
+      justify-self: start
+      color: #fff
+      font-size: 20px
+      font-weight: 500
+    .button
+        justify-self: center
+
+@media (max-width: 480px)
+  .line-trigger
+    .content
+      grid-template-columns: 1fr
+      p 
+        justify-self: center
+      
