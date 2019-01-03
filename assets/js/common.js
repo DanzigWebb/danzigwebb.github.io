@@ -1,9 +1,21 @@
 $(document).ready(function() {
   $("#my-menu").mmenu({
-    extensions: [ 'effect-menu-slide', 'pagedim-black', "fx-listitems-fade", 'position-right' ],
+    extensions: [ 'effect-menu-slide', 'pagedim-black', "fx-listitems-fade", 'position-right', 'theme-dark' ],
     navbar: {
-      //title: '<img src="/assets/img/main/logo-1.png">'
+      title: 'WebRunn'
     },
+    "counters": true,
+               "iconbar": {
+                  "add": true,
+                  "top": [
+                     "<a href='/'><i class='fa fa-home'></i></a>",
+                  ],
+                  "bottom": [
+                     "<a href='https://vk.com/id128989093' target='_blank'><i class='fab fa-vk'></i></a>",
+                     "<a href='#/'><i class='fas fa-envelope'></i></a>",
+                     "<a href='#/'><i class='fab fa-whatsapp'></i></a>"
+                  ],
+                }
   }, {
      // configuration
      offCanvas: {

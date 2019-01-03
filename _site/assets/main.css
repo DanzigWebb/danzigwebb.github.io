@@ -248,7 +248,11 @@ section {
 .row {
   display: flex;
   flex-direction: row;
+  justify-content: space-between;
   padding: 15px; }
+
+.grid {
+  display: grid; }
 
 h1 {
   font-size: 50px;
@@ -342,7 +346,8 @@ a {
 
 header {
   width: 100%;
-  background: #363636; }
+  position: absolute;
+  top: 0; }
 
 .hedline {
   position: relative;
@@ -351,7 +356,10 @@ header {
   grid-template-rows: 80px;
   grid-gap: 5px;
   max-width: 1280px;
-  margin: auto; }
+  margin: auto;
+  align-items: center;
+  padding-right: 10px;
+  padding-left: 10px; }
   .hedline .hamburger {
     justify-self: end;
     display: grid;
@@ -371,18 +379,48 @@ header {
     .hedline .hedmenu a:hover {
       color: #af8652; }
 
-.logo {
-  position: relative;
-  background: url(img/main/logo-1.png);
-  background-repeat: no-repeat;
-  top: 15px;
-  left: 40px; }
+header .hamburger-box {
+  display: flex;
+  justify-content: center; }
+
+header .hamburger {
+  padding: 12px 10px;
+  background-color: rgba(0, 0, 0, 0.8); }
 
 .hamburger-box .hamburger-inner, .hamburger-box .hamburger-inner::before, .hamburger-box .hamburger-inner::after {
   border-radius: 1px;
   background-color: #fff;
   width: 30px;
   height: 3px; }
+
+.mm-navbar__title {
+  font-size: 1.5em;
+  font-weight: 600; }
+
+.mm-listitem__text {
+  font-weight: 500;
+  letter-spacing: 1px; }
+
+.mm-listitem__text:hover {
+  background-color: #af8652; }
+
+.mm-iconbar__bottom .fa, .mm-iconbar__bottom .fab {
+  font-family: "Font Awesome 5 Brands";
+  font-size: 20px; }
+.mm-iconbar__bottom .fa-envelope {
+  font-size: 20px; }
+.mm-iconbar__bottom .fa-whatsapp {
+  font-weight: 900;
+  font-size: 22px; }
+
+.mm-iconbar__bottom .fas:hover, .mm-iconbar__bottom .fab:hover {
+  color: #af8652; }
+
+.mm-iconbar__top .fa-home {
+  font-size: 22px;
+  margin-top: 10px; }
+.mm-iconbar__top .fa-home:hover {
+  color: #af8652; }
 
 footer {
   background-color: #171F2A;
@@ -634,43 +672,46 @@ footer {
   .my-services h2 {
     text-align: left;
     margin-bottom: 40px; }
-  .my-services h4 {
-    margin-top: 10px;
-    margin-bottom: 10px;
-    color: #5e5e5e; }
-  .my-services .svg-icon {
-    height: 100px;
-    width: 100px;
-    fill: #5e5e5e; }
-  .my-services .owl-nav {
-    position: absolute;
-    top: -75px;
-    left: 400px; }
-    .my-services .owl-nav .fa-arrow-right:before {
-      font-size: 34px;
-      margin-left: 25px; }
-    .my-services .owl-nav .fa-arrow-left:before {
-      font-size: 34px;
-      margin-right: 25px; }
-  .my-services .item {
-    border-radius: 4px;
-    padding: 10px;
-    height: 240px; }
-  .my-services .item:hover {
-    box-shadow: inset 0px 0px 2px 2px rgba(0, 0, 0, 0.25); }
-    .my-services .item:hover .svg-icon {
-      fill: #af8652; }
-  .my-services .owl-dots {
-    margin-top: 20px; }
-  .my-services .owl-dot span {
-    height: 15px;
-    width: 15px;
-    background-color: #dedede;
-    display: block;
-    margin-right: 10px;
-    border-radius: 50%; }
-  .my-services .active span {
-    background-color: #af8652; }
+
+.owl-carousel h4 {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  color: #5e5e5e; }
+.owl-carousel .svg-icon {
+  height: 100px;
+  width: 100px;
+  fill: #5e5e5e;
+  transition: 0.3s; }
+.owl-carousel .owl-nav {
+  position: absolute;
+  top: -75px;
+  left: 400px; }
+  .owl-carousel .owl-nav .fa-arrow-right:before {
+    font-size: 34px;
+    margin-left: 25px; }
+  .owl-carousel .owl-nav .fa-arrow-left:before {
+    font-size: 34px;
+    margin-right: 25px; }
+.owl-carousel .item {
+  border-radius: 4px;
+  padding: 10px;
+  height: 240px;
+  transition: 0.3s; }
+.owl-carousel .item:hover {
+  box-shadow: inset 0px 0px 2px 2px rgba(0, 0, 0, 0.25); }
+  .owl-carousel .item:hover .svg-icon {
+    fill: #af8652; }
+.owl-carousel .owl-dots {
+  margin-top: 20px; }
+.owl-carousel .owl-dot span {
+  height: 15px;
+  width: 15px;
+  background-color: #dedede;
+  display: block;
+  margin-right: 10px;
+  border-radius: 50%; }
+.owl-carousel .active span {
+  background-color: #af8652; }
 
 @media (max-width: 540px) {
   .my-services .owl-nav {

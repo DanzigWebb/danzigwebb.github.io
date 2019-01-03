@@ -1,7 +1,7 @@
 header
 	width: 100%
-	background: #363636
-
+	position: absolute
+	top: 0
 .hedline
 	position: relative
 	display: grid
@@ -10,6 +10,9 @@ header
 	grid-gap: 5px
 	max-width: 1280px
 	margin: auto
+	align-items: center
+	padding-right: 10px
+	padding-left: 10px
 	.hamburger
 		justify-self: end
 		display: grid
@@ -29,14 +32,24 @@ header
 		a:hover
 			color: $accent
 
-.logo
-	position: relative
-	background: url(img/main/logo-1.png)
-	background-repeat: no-repeat
-	top: 15px
-	left: 40px
+//.logo
+	font-size: 2em
+	padding-left: 40px
+	font-weight: 600
+	color: rgba(66, 66, 66, 0.8)
 
+/////////////////////////////////////////////////////
+// Мменю
+////////////////////////////////////////////////////
 
+header
+	.hamburger-box
+		display: flex
+		justify-content: center
+header
+	.hamburger
+		padding: 12px 10px
+		background-color: rgba(0, 0, 0, 0.8)
 
 .hamburger-box
 	.hamburger-inner, .hamburger-inner::before, .hamburger-inner::after
@@ -44,3 +57,33 @@ header
 		background-color: #fff
 		width: 30px
 		height: 3px
+
+.mm-navbar__title
+	font-size: 1.5em
+	font-weight: 600
+.mm-listitem__text
+	font-weight: 500
+	letter-spacing: 1px
+.mm-listitem__text:hover
+	background-color: $accent
+
+
+.mm-iconbar__bottom
+	.fa, .fab,
+		font-family: "Font Awesome 5 Brands"
+		font-size: 20px
+	.fa-envelope
+		font-size: 20px
+	.fa-whatsapp
+		font-weight: 900
+		font-size: 22px
+	
+.mm-iconbar__bottom
+	.fas:hover, .fab:hover
+		color: $accent
+.mm-iconbar__top
+	.fa-home
+		font-size: 22px
+		margin-top: 10px
+	.fa-home:hover
+		color: $accent

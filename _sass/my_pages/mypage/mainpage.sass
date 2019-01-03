@@ -1,4 +1,6 @@
-
+/////////////////////////////////////////////////////
+// Слайдер
+////////////////////////////////////////////////////
 .main-slider
   background: url(img/mainpage/bg-main.jpg) no-repeat center
   background-size: cover
@@ -42,6 +44,10 @@
     .heading
       p 
         margin-bottom: 20px
+
+/////////////////////////////////////////////////////
+// О себе
+////////////////////////////////////////////////////
 
 .left-heading, .right-heading
   display: flex
@@ -101,6 +107,10 @@
       display: none
     img
       display: none
+
+/////////////////////////////////////////////////////
+// Что умею
+////////////////////////////////////////////////////
 
 
 .what-do
@@ -175,11 +185,24 @@
     .line-heading
       margin-bottom: $gatter
 
+
+/////////////////////////////////////////////////////
+// Сервисы
+////////////////////////////////////////////////////
+
+
+
 .my-services
   position: relative
   h2
     text-align: left
     margin-bottom: 40px
+
+/////////////////////////////////////////////////////
+// Карусель
+////////////////////////////////////////////////////
+
+.owl-carousel   
   h4
     margin-top: 10px
     margin-bottom: 10px
@@ -188,6 +211,7 @@
     height: 100px
     width: 100px
     fill: #5e5e5e
+    transition: 0.3s
   .owl-nav
     position: absolute
     top: -75px
@@ -202,6 +226,7 @@
     border-radius: 4px
     padding: 10px
     height: 240px
+    transition: 0.3s
   .item:hover
     box-shadow: inset 0px 0px 2px 2px rgba(0, 0, 0, 0.25)
     .svg-icon
