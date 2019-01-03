@@ -58,7 +58,7 @@ $(document).ready(function() {
             nav:true,
             loop:false
         }
-    }
+    },
   })
 });
 
