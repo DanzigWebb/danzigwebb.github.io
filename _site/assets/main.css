@@ -474,24 +474,32 @@ footer {
           text-align: left; }
         footer .container .footleft .flcontact i {
           margin-right: 10px; }
-      footer .container .footleft .socmenu i {
-        color: #fff;
-        font-size: 18px;
-        width: 45px;
-        height: 45px;
-        background-color: #395b98;
-        line-height: 45px;
-        text-align: center;
-        border-radius: 50%;
-        box-shadow: inset 0 -5px 0 0 rgba(0, 0, 0, 0.15);
-        margin-right: 10px;
-        transition: 0.6s; }
-      footer .container .footleft .socmenu i:hover {
-        background-color: #77C88B; }
-      footer .container .footleft .socmenu .fa-google {
-        background-color: #d95139; }
-      footer .container .footleft .socmenu .fa-vk {
-        background-color: #4879a1; }
+  footer .socmenu {
+    padding-top: 40px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    max-width: 200px;
+    margin: auto; }
+    footer .socmenu i {
+      color: #fff;
+      font-size: 18px;
+      width: 45px;
+      height: 45px;
+      background-color: #00e676;
+      line-height: 45px;
+      text-align: center;
+      border-radius: 50%;
+      box-shadow: inset 0 -5px 0 0 rgba(0, 0, 0, 0.15);
+      margin-right: 10px;
+      transition: 0.6s; }
+    footer .socmenu i:hover {
+      background-color: #af8652; }
+    footer .socmenu .fa-google {
+      background-color: #d95139; }
+    footer .socmenu .fa-vk {
+      background-color: #4879a1; }
+    footer .socmenu .fa-whatsapp {
+      font-size: 25px; }
   @media (max-width: 770px) {
     footer .container {
       grid-gap: 25px; }

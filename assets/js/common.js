@@ -13,7 +13,7 @@ $(document).ready(function() {
                   "bottom": [
                      "<a href='https://vk.com/id128989093' target='_blank'><i class='fab fa-vk'></i></a>",
                      "<a href='#/'><i class='fas fa-envelope'></i></a>",
-                     "<a href='#/'><i class='fab fa-whatsapp'></i></a>"
+                     "<a href='https://api.whatsapp.com/send?phone=79500247418' target='_blank'><i class='fab fa-whatsapp'></i></a>"
                   ],
                 }
   }, {
