@@ -84,13 +84,6 @@ p {
   font-weight: 300;
   margin: 0; }
 
-hr {
-  margin-top: 20px;
-  height: 4px;
-  background-color: #3cb879;
-  border: none;
-  width: 60px; }
-
 mark {
   background: #ff0;
   color: #000; }
@@ -276,6 +269,13 @@ h5 {
   font-weight: 500;
   margin-bottom: 15px;
   font-size: 18px; }
+
+hr {
+  margin-top: 10px;
+  height: 7px;
+  background-color: #dedede;
+  border: none;
+  width: 60px; }
 
 .circle {
   display: block;
@@ -584,6 +584,9 @@ footer {
   align-items: center;
   position: relative;
   overflow: hidden; }
+  .left-heading img, .right-heading img {
+    max-width: 470px;
+    height: auto; }
   .left-heading h2, .right-heading h2 {
     text-align: left;
     margin-bottom: 15px; }
