@@ -2,6 +2,9 @@ $(document).ready(function(){
   $('.services-carousel').owlCarousel({
     loop:true,
     margin:20,
+    autoplay:true,
+    autoplayTimeout:2000,
+    autoplayHoverPause:true,
     responsiveClass:true,
     responsive:{
         0:{
@@ -23,7 +26,7 @@ $(document).ready(function(){
             items:4,
             nav:true,
             dots:false,
-            loop:false
+            loop:true
         }
     },
   })

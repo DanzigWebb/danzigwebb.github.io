@@ -44,6 +44,8 @@ b, strong
 // иконки
 .hamburger.is-active .hamburger-inner, .hamburger.is-active .hamburger-inner::before, .hamburger.is-active .hamburger-inner::after
   background-color: #fff
+  position: fixed
+  top: 20px
 .header-icons
   display: flex
   justify-content: space-between
@@ -51,10 +53,15 @@ b, strong
   padding: 0 10px
   width: 100%
 
+.header-icons--is-active
+  position: fixed
+  z-index: 101
+
 .my-menu-button
   right: 40px
   top: 20px
   z-index: 101
+  
 .header-logo__link
   left: 40px
   top: 20px
