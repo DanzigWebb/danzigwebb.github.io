@@ -1,0 +1,128 @@
+
+// типографика
+.site-link
+  text-decoration: none
+  transition: $animate
+  color: $black
+.site-link:hover
+  color: $accent
+  text-decoration: none
+  
+.title-1
+  font-size: 80px
+  font-weight: 700
+  letter-spacing: .025em
+  font-family: 'Oswald', sans-serif
+  +media-breakpoint-down(xs) 
+    font-size: 45px
+.title-2
+  font-size: 52px
+  font-weight: 700
+  line-height: 1.2
+  letter-spacing: .05em
+  font-family: 'Oswald', sans-serif
+.title-3
+  font-size: 30px
+  font-weight: 500
+  line-height: 1.2
+  letter-spacing: 0px
+  font-family: 'Oswald', sans-serif
+.title-4
+  font-size: 22px
+  font-weight: 400
+
+
+.main-btn
+  display: inline-block
+  padding: 10px 10px
+  text-transform: uppercase
+  border: 1px solid $black
+  text-decoration: none
+  color: $black
+  letter-spacing: 3px
+  font-size: 14px
+  position: relative
+  overflow: hidden
+  transition: $animate
+  font-weight: 500
+  &:hover
+    text-decoration: none
+    color: $black
+    background: #fff
+    border: 1px solid #fff
+
+.main-btn--white
+  border: 1px solid #fff
+  background: #fff
+  &:hover
+    background: $black
+    color: #fff
+  
+.main-btn--reverse
+  background-color: #fff
+  color: #333333
+  font-weight: 700
+.main-btn--reverse:hover
+  background-color: $accent
+  color: #fff
+.main-btn--round
+  border-radius: 50%
+  width: 50px
+  height: 50px
+
+// кнопка в портфолио
+.mywork-button
+  display: inline-block
+  padding: 5px 10px
+  text-transform: uppercase
+  border: 1px solid $black
+  text-decoration: none
+  color: $black
+  letter-spacing: 3px
+  font-size: 14px
+  position: relative
+  overflow: hidden
+  transition: $animate
+  &:hover
+    text-decoration: none
+    color: $black
+    background: #fff
+    border: 1px solid #fff
+
+
+
+
+.p-footer
+  font-size: 14px
+  font-weight: 400
+  letter-spacing: 2px
+.t-center
+  text-align: center
+// прочее 
+
+.animated
+  webkit-animation-duration: .7s
+  animation-duration: .7s
+  -webkit-animation-fill-mode: both
+  animation-fill-mode: both
+  opacity: 1
+section 
+  padding: 40px 0
+
+// сетка
+.border-wrapper
+  width: 100%
+  height: 100%
+  position: fixed
+  z-index: -1
+  .border
+    border-right: 1px solid #f1f1f1
+  .border:nth-child(1), .border:nth-child(2)
+    +media-breakpoint-down(md)
+      display: none
+  .border:nth-child(1), .border:nth-child(2), .border:nth-child(3)
+    +media-breakpoint-down(xs)
+      display: none
+.border-row
+  height: 100%
+  flex-wrap: nowrap

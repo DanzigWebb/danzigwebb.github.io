@@ -1,31 +1,420 @@
-
-// импорт инструментария
-@import 'tools/normalize'
-@import 'tools/vars'
-@import 'bourbon/bourbon'
-@import 'tools/norm'
-
-// общие стили
-
-@import 'basics/body'
-@import 'basics/links'
-@import 'basics/button'
-@import 'basics/fonts'
-
-// кастомизация шаблона
-
-@import 'my_pages/header'
-@import 'my_pages/footer'
-@import 'my_pages/second-page'
-
-// главные страницы
-
-@import 'my_pages/mypage/mainpage'
-@import 'my_pages/mypage/services'
-@import 'my_pages/mypage/about'
+@import "vars"
+@import "fonts"
+@import "libs"
+@import "norm"
 
 
-// даптивное меню гамбургер
+::placeholder
+  color: #666
 
-@import 'libs/hamburgers/hamburgers'
-@import '/mmenu/dist/jquery.mmenu.all.css'
+::selection
+  background-color: $accent
+  color: #fff
+
+body
+  font-size: 16px
+  min-width: 320px
+  position: relative
+  font-family: 'Montserrat', sans-serif
+  line-height: 1.65
+  overflow-x: hidden
+  color: $text
+  input, textarea
+    border: #666 1px solid
+    outline: none
+    &:focus:required:invalid
+      border-color: red
+    &:required:valid
+      border-color: green
+
+.img-responsive
+  display: block
+  max-width: 100%
+  height: auto
+  &.img-width
+    width: 100%
+
+.text-center
+  text-align: center
+
+b, strong
+  font-weight: bold
+
+// сайдбар меню || хедер
+// иконки
+.hamburger.is-active .hamburger-inner, .hamburger.is-active .hamburger-inner::before, .hamburger.is-active .hamburger-inner::after
+  background-color: #fff
+.header-icons
+  display: flex
+  justify-content: space-between
+  align-items: center
+  padding: 0 10px
+  width: 100%
+
+.my-menu-button
+  right: 40px
+  top: 20px
+  z-index: 101
+.header-logo__link
+  left: 40px
+  top: 20px
+  img
+    width: 45px
+    height: 45px
+
+.mysidebar-social
+  position: absolute
+  left: 10px
+  display: block
+  width: 20px
+  a
+    margin: 40px 0
+    display: block
+    color: #fff
+  .fa-whatsapp
+    font-weight: 500
+    font-size: 18px
+  
+.mysidebar
+  position: fixed
+  top: 0
+  left: -100%
+  width: 100%
+  height: 100vh
+  background-color: #262626
+  display: flex
+  justify-content: center
+  align-items: center
+  transition: $animate
+  z-index: 100
+.mysidebar.is-active
+    left: 0
+    z-index: 100
+.sidebar-menu
+  margin: 0
+  padding: 0
+  counter-reset: count
+  li
+    list-style: none
+    text-align: center
+.sidebar-menu__link
+  color: #fff
+  font-weight: 700
+  letter-spacing: 2px
+  text-transform: uppercase
+  font-size: 35px
+  display: block
+  margin: 10px
+  position: relative
+  z-index: 1
+  
+.sidebar-menu__link:after
+  counter-increment: count
+  content: "0" counter(count) ""
+  position: absolute
+  left: 30%
+  font-size: 70px
+  font-weight: 800
+  z-index: -1
+  top: 0
+  line-height: 70%
+  color: rgba(109, 109, 109, 0.3)
+  opacity: 0
+  transition: $animate
+.sidebar-menu__link:hover:after
+  opacity: 1
+
+/////////////////////////////
+// главный экран
+/////////////////////////////
+
+.main-screen
+  height: 550px
+  display: flex
+  align-items: center
+  position: relative
+.main-screen-social
+  position: absolute
+  left: 10px
+  .fa-whatsapp
+    font-weight: 700
+    font-size: 18px
+  +media-breakpoint-down(xs)
+    position: inherit
+    display: flex
+    justify-content: center
+  a
+    display: block
+    margin: 40px 0
+    width: 20px
+    +media-breakpoint-down(xs) 
+      display: inline-block
+      margin: 20px 40px
+.main-screen-content
+  display: flex
+  justify-content: center
+  align-items: center
+
+.main-screen__pic
+  width: 100%
+  max-width: 500px
+.main-screen-pic
+  +media-breakpoint-down(xs)
+    display: none
+.main-screen-heading__name
+  font-weight: 500
+.main-screen-heading__footer
+  font-weight: 500
+  text-align: center
+  font-size: 16px
+  letter-spacing: 7px
+.main-screen-heading
+  position: relative
+  left: 50px
+  +media-breakpoint-down(xs) 
+    left: 0
+
+/////////////////////////////
+// портфолио
+/////////////////////////////
+.mywork
+  counter-reset: count
+  padding-bottom: 0
+.mywork-heading
+  padding: 40px 10px
+.mywork-box
+  padding: 40px 0
+  background-color: #fff
+  z-index: 1
+  border-top: 1px solid #f1f1f1
+  border-bottom: 1px solid #f1f1f1
+  background-size: cover
+  background-position: center center
+  position: relative
+  &:before
+    content: ""
+    position: absolute
+    left: 0
+    top: 0
+    width: 100%
+    height: 100%
+    background-color: rgba(13, 0, 44, 0.75)
+    z-index: -1
+    transition: $animate
+  &:after
+    content: ""
+    position: absolute
+    right: 0
+    top: 0
+    width: 100%
+    height: 100%
+    background-color: #fff
+    z-index: -1
+    transition: $animate
+.mywork-box:nth-child(2)
+  background-image: url(img/portfolio/grocmart.jpg)
+.mywork-box:nth-child(3)
+  background-image: url(img/portfolio/tatoo.jpg)
+.mywork-box:nth-child(4)
+  background-image: url(img/portfolio/melody.jpg)
+.mywork-box:nth-child(5)
+  background-image: url(img/portfolio/kitchen.jpg)
+
+.mywork-box:hover:after
+  width: 0
+
+.mywork-box:hover
+  .mywork-item__title
+    color: #fff
+  .mywork-item-tags__tag
+    color: #fff
+  .mywork-box__number:after
+    color: #fff
+  .mywork-box__number:before
+    background: #fff
+    width: 70px
+  .mywork-button
+    color: #fff
+    border: 1px solid #fff
+    &:hover
+      text-decoration: none
+      color: $black
+      background: #fff
+      border: 1px solid #fff
+
+.mywork-item-content
+  min-height: 140px
+  align-items: flex-end
+  padding-left: 120px
+  +media-breakpoint-down(xs)
+    padding-left: inherit
+  
+.mywork-box__number
+  &:after
+    counter-increment: count
+    content: "0"counter(count)
+    color: #000
+    transition: $animate
+  &:before
+    content: ''
+    width: 40px
+    height: 1px
+    display: inline-block
+    background: #000
+    margin-bottom: 5px
+    margin-right: 4px
+    transition: $animate
+  
+.mywork-item-tags
+  margin-top: 20px
+  transition-delay: 0.5s
+.mywork-item__title
+  transition: $animate
+  transition: all ease 0.5s
+  text-transform: uppercase
+  font-weight: 700
+  font-size: 15px
+  letter-spacing: 1px
+.mywork-item-tags__tag
+  display: inline-block
+  margin-right: 10px
+  font-size: 14px
+  text-transform: uppercase
+  font-weight: 400
+  letter-spacing: 1px
+  transition: $animate
+.mywork-item-tags__tag:after
+  content: '|'
+  display: inline-block
+  margin-left: 10px
+.mywork-item-tags__tag:last-child:after
+  content: ''
+
+.mywork-item--btn
+  display: flex
+  align-items: center
+  justify-content: center
+  flex-direction: column
+  +media-breakpoint-down(xs)
+    justify-content: flex-start
+    align-items: flex-start
+
+
+/////////////////////////////
+// карусель навыков
+/////////////////////////////
+.services
+  .owl-dots
+    margin-top: 20px
+  .owl-dot
+    span 
+      height: 15px
+      width: 15px
+      background-color: #dedede
+      display: block
+      margin-right: 10px
+      border-radius: 50%
+  .active
+    span
+      background-color: $accent
+  .owl-nav
+    position: absolute
+    top: -120px
+    left: 400px
+    +media-breakpoint-down(xs)
+      left: 20px
+      top: -60px
+    .fa-arrow-right:before
+      font-size: 34px
+      margin-left: 25px
+    .fa-arrow-left:before
+      font-size: 34px
+      margin-right: 25px
+.services__title
+  margin-bottom: 80px
+.services-item__title
+  font-size: 22px
+  font-weight: 600
+  font-family: 'Oswald', sans-serif
+.services-item__svg
+  height: 100px
+  width: 100px
+  margin-bottom: 20px
+  fill: #5e5e5e
+  transition: $animate
+.services-item:hover
+  .services-item__svg
+    fill: $accent
+  
+// обо мне
+.whatcan-wrap
+  justify-content: center
+  align-items: center
+  position: relative
+.whatcan-content__title
+  margin-bottom: $gutter
+.whatcan-img
+  overflow: hidden
+  +media-breakpoint-down(sm)
+    margin-bottom: 20px
+  img
+    +media-breakpoint-down(sm)
+      width: 100%
+  &:after
+    content: ''
+    height: 100%
+    width: 140%
+    background-color: #dedede
+.whatcan-lightbox
+  position: absolute
+  height: 100%
+  width: 75%
+  left: 15px
+  display: block
+  background: rgba(222,222,222,0.6)
+  z-index: -1
+  +media-breakpoint-down(sm)
+    display: none
+
+.whatcan-content__txt
+  position: relative
+  padding-left: 70px
+  +media-breakpoint-down(xs)
+    padding-left: 40px
+  &:before
+    content: ""
+    width: 60px
+    height: 7px
+    background-color: #dedede
+    display: block
+    position: absolute
+    top: 10px
+    left: 0
+    +media-breakpoint-down(xs)
+      width: 30px
+
+// инструменты
+.instruments
+  .fab
+    font-size: 90px
+    color: #5e5e5e
+    text-align: center
+    transition: $animate
+    &:hover
+      color: $accent
+.instruments-item
+  display: flex
+  justify-content: center
+// контакт
+.main-contact
+  background-color: $black
+  padding: 60px 10px
+  text-align: center
+  color: #fff
+.main-contact__txt
+  font-weight: 300
+  letter-spacing: 2px
+
+
+// всегда в конце
+@import "media"
