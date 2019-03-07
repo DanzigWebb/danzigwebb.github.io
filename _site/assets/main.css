@@ -2382,7 +2382,8 @@ html {
   position: relative;
   overflow: hidden;
   transition: all ease 0.5s;
-  font-weight: 500; }
+  font-weight: 500;
+  font-family: "Oswald", sans-serif; }
   .main-btn:hover {
     text-decoration: none;
     color: #1a1a1a;
@@ -2500,6 +2501,10 @@ body {
 b, strong {
   font-weight: bold; }
 
+p {
+  color: #171717;
+  font-weight: 300; }
+
 .hamburger.is-active .hamburger-inner, .hamburger.is-active .hamburger-inner::before, .hamburger.is-active .hamburger-inner::after {
   background-color: #fff;
   position: fixed;
@@ -2576,6 +2581,9 @@ b, strong {
   margin: 10px;
   position: relative;
   z-index: 1; }
+  @media (max-width: 575.98px) {
+    .sidebar-menu__link {
+      font-size: 28px; } }
 
 .sidebar-menu__link:after {
   counter-increment: count;
@@ -2602,7 +2610,8 @@ b, strong {
 
 .main-screen-social {
   position: absolute;
-  left: 10px; }
+  left: 10px;
+  width: 40px; }
   .main-screen-social .fa-whatsapp {
     font-weight: 700;
     font-size: 18px; }
@@ -2628,10 +2637,20 @@ b, strong {
 .main-screen__pic {
   width: 100%;
   max-width: 500px; }
+  @media (max-width: 575.98px) {
+    .main-screen__pic {
+      width: 60%; } }
 
 @media (max-width: 575.98px) {
   .main-screen-pic {
-    display: none; } }
+    display: flex;
+    justify-content: center;
+    align-items: center; } }
+.main-screen-pic img {
+  width: 100%; }
+  @media (max-width: 575.98px) {
+    .main-screen-pic img {
+      width: 60%; } }
 
 .main-screen-heading__name {
   font-weight: 500; }
@@ -2648,6 +2667,11 @@ b, strong {
   @media (max-width: 575.98px) {
     .main-screen-heading {
       left: 0; } }
+
+@media (max-width: 991.98px) {
+  #my-page .main-screen-heading {
+    left: 0;
+    text-align: center; } }
 
 .mywork {
   counter-reset: count;
@@ -2686,16 +2710,16 @@ b, strong {
     z-index: -1;
     transition: all ease 0.5s; }
 
-.mywork-box:nth-child(2) {
+.mywork-box:nth-child(1) {
   background-image: url(img/portfolio/grocmart.jpg); }
 
-.mywork-box:nth-child(3) {
+.mywork-box:nth-child(2) {
   background-image: url(img/portfolio/tatoo.jpg); }
 
-.mywork-box:nth-child(4) {
+.mywork-box:nth-child(3) {
   background-image: url(img/portfolio/melody.jpg); }
 
-.mywork-box:nth-child(5) {
+.mywork-box:nth-child(4) {
   background-image: url(img/portfolio/kitchen.jpg); }
 
 .mywork-box:hover:after {
@@ -2720,9 +2744,10 @@ b, strong {
     border: 1px solid #fff; }
 
 .mywork-item-content {
+  padding-left: 20px;
+  padding-bottom: 40px;
   min-height: 140px;
-  align-items: flex-end;
-  padding-left: 120px; }
+  align-items: flex-end; }
   @media (max-width: 575.98px) {
     .mywork-item-content {
       padding-left: inherit; } }
@@ -2772,10 +2797,9 @@ b, strong {
   content: ""; }
 
 .mywork-item--btn {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column; }
+  position: absolute;
+  right: 20px;
+  bottom: 20px; }
   @media (max-width: 575.98px) {
     .mywork-item--btn {
       justify-content: flex-start;
@@ -2878,13 +2902,15 @@ b, strong {
       .whatcan-content__txt:before {
         width: 30px; } }
 
-.instruments .fab {
-  font-size: 90px;
-  color: #5e5e5e;
-  text-align: center;
-  transition: all ease 0.5s; }
-  .instruments .fab:hover {
-    color: #af8652; }
+.instruments {
+  padding-bottom: 80px; }
+  .instruments .fab {
+    font-size: 90px;
+    color: #5e5e5e;
+    text-align: center;
+    transition: all ease 0.5s; }
+    .instruments .fab:hover {
+      color: #af8652; }
 
 .instruments-item {
   display: flex;
@@ -2899,6 +2925,47 @@ b, strong {
 .main-contact__txt {
   font-weight: 300;
   letter-spacing: 2px; }
+
+.site-footer {
+  position: relative;
+  padding-top: 40px; }
+
+.footer-menu li {
+  list-style: none;
+  margin-top: 8px; }
+
+.footer__title {
+  margin-bottom: 40px; }
+
+.footer-social {
+  display: flex;
+  align-items: center; }
+  .footer-social .fa-whatsapp {
+    font-size: 23px;
+    line-height: 22px; }
+
+.footer-social__link {
+  margin-right: 30px;
+  width: 40px;
+  height: 40px;
+  background-color: #1a1a1a;
+  color: #fff;
+  padding: 10px;
+  border-radius: 100%;
+  display: block;
+  line-height: 24px;
+  text-align: center;
+  font-size: 18px; }
+  .footer-social__link:hover {
+    background-color: #af8652;
+    color: #fff; }
+
+.footer-special {
+  margin-top: 40px;
+  padding: 20px 10px;
+  border-top: 1px solid #dedede;
+  text-align: right;
+  background-color: #fff; }
 
 /*==========  Desktop First  ========== */
 /*==========  Mobile First  ========== */

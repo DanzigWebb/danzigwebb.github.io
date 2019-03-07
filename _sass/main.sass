@@ -39,7 +39,9 @@ body
 
 b, strong
   font-weight: bold
-
+p
+  color: #171717
+  font-weight: 300
 // сайдбар меню || хедер
 // иконки
 .hamburger.is-active .hamburger-inner, .hamburger.is-active .hamburger-inner::before, .hamburger.is-active .hamburger-inner::after
@@ -114,6 +116,8 @@ b, strong
   margin: 10px
   position: relative
   z-index: 1
+  +media-breakpoint-down(xs)
+    font-size: 28px
   
 .sidebar-menu__link:after
   counter-increment: count
@@ -143,6 +147,7 @@ b, strong
 .main-screen-social
   position: absolute
   left: 10px
+  width: 40px 
   .fa-whatsapp
     font-weight: 700
     font-size: 18px
@@ -165,9 +170,18 @@ b, strong
 .main-screen__pic
   width: 100%
   max-width: 500px
+  +media-breakpoint-down(xs)
+    width: 60%
 .main-screen-pic
   +media-breakpoint-down(xs)
-    display: none
+    display: flex
+    justify-content: center
+    align-items: center
+  img 
+    width: 100%
+    +media-breakpoint-down(xs)
+      width: 60%
+
 .main-screen-heading__name
   font-weight: 500
 .main-screen-heading__footer
@@ -180,6 +194,14 @@ b, strong
   left: 50px
   +media-breakpoint-down(xs) 
     left: 0
+
+//корректировка для страниц
+#my-page
+  .main-screen-heading
+    +media-breakpoint-down(md) 
+      left: 0
+      text-align: center
+
 
 /////////////////////////////
 // портфолио
@@ -218,13 +240,13 @@ b, strong
     background-color: #fff
     z-index: -1
     transition: $animate
-.mywork-box:nth-child(2)
+.mywork-box:nth-child(1)
   background-image: url(img/portfolio/grocmart.jpg)
-.mywork-box:nth-child(3)
+.mywork-box:nth-child(2)
   background-image: url(img/portfolio/tatoo.jpg)
-.mywork-box:nth-child(4)
+.mywork-box:nth-child(3)
   background-image: url(img/portfolio/melody.jpg)
-.mywork-box:nth-child(5)
+.mywork-box:nth-child(4)
   background-image: url(img/portfolio/kitchen.jpg)
 
 .mywork-box:hover:after
@@ -250,9 +272,10 @@ b, strong
       border: 1px solid #fff
 
 .mywork-item-content
+  padding-left: 20px
+  padding-bottom: 40px
   min-height: 140px
   align-items: flex-end
-  padding-left: 120px
   +media-breakpoint-down(xs)
     padding-left: inherit
   
@@ -298,10 +321,9 @@ b, strong
   content: ''
 
 .mywork-item--btn
-  display: flex
-  align-items: center
-  justify-content: center
-  flex-direction: column
+  position: absolute
+  right: 20px
+  bottom: 20px
   +media-breakpoint-down(xs)
     justify-content: flex-start
     align-items: flex-start
@@ -400,8 +422,11 @@ b, strong
     +media-breakpoint-down(xs)
       width: 30px
 
+/////////////////////////////
 // инструменты
+/////////////////////////////
 .instruments
+  padding-bottom: 80px
   .fab
     font-size: 90px
     color: #5e5e5e
@@ -412,6 +437,11 @@ b, strong
 .instruments-item
   display: flex
   justify-content: center
+
+
+/////////////////////////////
+// футер
+/////////////////////////////
 // контакт
 .main-contact
   background-color: $black
@@ -423,5 +453,42 @@ b, strong
   letter-spacing: 2px
 
 
+.site-footer
+  position: relative
+  padding-top: 40px
+.footer-menu
+  li
+    list-style: none
+    margin-top: 8px
+.footer__title
+  margin-bottom: 40px
+.footer-social
+  display: flex
+  align-items: center
+  .fa-whatsapp
+    font-size: 23px
+    line-height: 22px
+.footer-social__link
+  margin-right: 30px
+  width: 40px
+  height: 40px
+  background-color: $black
+  color: #fff
+  padding: 10px
+  border-radius: 100%
+  display: block
+  line-height: 24px
+  text-align: center
+  font-size: 18px
+  &:hover
+    background-color: $accent
+    color: #fff
+
+.footer-special
+  margin-top: 40px
+  padding: 20px 10px
+  border-top: 1px solid #dedede
+  text-align: right
+  background-color: #fff
 // всегда в конце
 @import "media"

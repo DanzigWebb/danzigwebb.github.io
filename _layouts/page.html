@@ -6,6 +6,19 @@
 <body>
 <div id="my-page">
   {% include header.html %}
+
+  <section class="main-screen container-fluid">
+    <div class="container ">
+      <div class="row main-screen-content">
+        <div class="main-screen-heading">
+          <h1 class="main-screen-heading__name title-2">{{ page.title}}</h1>
+        </div>
+        <div class="col-sm-6 main-screen-pic">
+         <img src="/assets/img/main.png" alt="">
+        </div>
+      </div>
+    </div>
+  </section>
     
   {% include mypage/{{ page.link }}.html %}
 
