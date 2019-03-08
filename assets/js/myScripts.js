@@ -1,8 +1,20 @@
+// получение активной ссылки
+function takeLink () {
+  let links = document.getElementsByTagName('a');
+  for (let i = 0; i < links.length; i++) {
+    let linksUrl = links[i].href;
+    if (linksUrl == window.location.href || linksUrl+"/" == window.location.href) {
+      links[i].style.color = 'red'
+      }
+    }
+  }
+takeLink ();
+
+
 // сайдбар
 function openSidebar () {
   let buttonMenu = document.querySelector('.my-menu-button');
   let sidebar = document.querySelector('.mysidebar');
-  let menu = document.querySelector('.header-icons');
 
   buttonMenu.onclick = function(e) {
     // задержка анимации гамбургера
@@ -14,24 +26,31 @@ function openSidebar () {
     sidebar.classList.toggle('is-active');
   }
 }
-
-openSidebar ()
+openSidebar ();
 
 // прилипающее меню
 
-function fixedMenu () {
+function scrollEvents () {
   let menu = document.querySelector('.header-icons');
-  console.log(menu)
-  window.onscroll = function() {
-    var scrolled = window.pageYOffset || document.documentElement.scrollTop;
-    if (scrolled >= 300) {
+
+  let content = document.querySelector('.main-screen-heading');
+  let image = document.querySelector('.main-screen-pic');
+  window.onscroll = function(e) {
+    let scroll = window.scrollY;
+    if (scroll >= 300) {
       menu.classList.add('header-icons--is-active');
     } else {
       menu.classList.remove('header-icons--is-active');
     }
-    
+    // паралакс
+    content.style.transform = "translate(0%, " + scroll /5 + "%";
+    image.style.transform = "translate(0%, " + scroll /24 + "%";
+   
+
   }
-
 }
+scrollEvents ();
 
-fixedMenu ()
+
+
+
