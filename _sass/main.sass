@@ -334,6 +334,7 @@ header
 // карусель навыков
 /////////////////////////////
 .services
+  padding-bottom: 30px
   .owl-dots
     margin-top: 20px
   .owl-dot
@@ -366,12 +367,18 @@ header
   font-size: 22px
   font-weight: 600
   font-family: 'Oswald', sans-serif
+  text-align: center
+.services-item__txt
+  text-align: center
 .services-item__svg
   height: 100px
   width: 100px
   margin-bottom: 20px
   fill: #5e5e5e
   transition: $animate
+  display: block
+  margin: auto
+  margin-bottom: 30px
 .services-item:hover
   .services-item__svg
     fill: $accent
@@ -461,6 +468,11 @@ header
   li
     list-style: none
     margin-top: 8px
+.footer-menu__link
+  letter-spacing: 0.5px
+  font-weight: 500
+  font-size: 16px
+  color: $black
 .footer__title
   margin-bottom: 40px
 .footer-social

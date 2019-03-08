@@ -12,7 +12,7 @@ $(document).ready(function(){
             dots:false,
             nav:true
         },
-        400:{
+        450:{
             items:2,
             dots:false,
             nav:true
