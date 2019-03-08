@@ -2437,20 +2437,20 @@ html {
 .t-center {
   text-align: center; }
 
-#my-page p {
+#second-page p {
   color: #1a1a1a;
   font-size: 16px;
   font-weight: 400;
   letter-spacing: 0.5px;
   text-align: justify; }
-#my-page .t-center {
+#second-page .t-center {
   text-align: center; }
-#my-page .heading-hr {
+#second-page .heading-hr {
   margin: 30px auto;
   background: #af8652;
   height: 3px;
   width: 60px; }
-#my-page blockquote {
+#second-page blockquote {
   padding-left: 25px;
   margin-left: 20px;
   padding-top: 10px;
@@ -2749,6 +2749,8 @@ p {
 
 .mywork-box:hover .mywork-item__title {
   color: #fff; }
+.mywork-box:hover .mywork-item--btn {
+  opacity: 1; }
 .mywork-box:hover .mywork-item-tags__tag {
   color: #fff; }
 .mywork-box:hover .mywork-box__number:after {
@@ -2819,6 +2821,7 @@ p {
   content: ""; }
 
 .mywork-item--btn {
+  opacity: 0;
   position: absolute;
   right: 20px;
   bottom: 20px; }
