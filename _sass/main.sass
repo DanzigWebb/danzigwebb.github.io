@@ -3,6 +3,9 @@
 @import "libs"
 @import "norm"
 
+// страницы
+
+@import "pages/portfolio"
 
 ::placeholder
   color: #666
@@ -204,133 +207,6 @@ header
       text-align: center
 
 
-/////////////////////////////
-// портфолио
-/////////////////////////////
-.mywork
-  counter-reset: count
-  padding-bottom: 0
-.mywork-heading
-  padding: 40px 10px
-.mywork-box
-  padding: 80px 0
-  background-color: #fff
-  z-index: 1
-  border-top: 1px solid #f1f1f1
-  border-bottom: 1px solid #f1f1f1
-  background-size: cover
-  background-position: center center
-  position: relative
-  &:before
-    content: ""
-    position: absolute
-    left: 0
-    top: 0
-    width: 100%
-    height: 100%
-    background-color: rgba(13, 0, 44, 0.75)
-    z-index: -1
-    transition: $animate
-  &:after
-    content: ""
-    position: absolute
-    right: 0
-    top: 0
-    width: 100%
-    height: 100%
-    background-color: #fff
-    z-index: -1
-    transition: $animate
-.mywork-box:nth-child(1)
-  background-image: url(img/portfolio/grocmart.jpg)
-.mywork-box:nth-child(2)
-  background-image: url(img/portfolio/tatoo.jpg)
-.mywork-box:nth-child(3)
-  background-image: url(img/portfolio/melody.jpg)
-.mywork-box:nth-child(4)
-  background-image: url(img/portfolio/kitchen.jpg)
-
-.mywork-box:hover:after
-  width: 0
-
-.mywork-box:hover
-  .mywork-item__title
-    color: #fff
-  .mywork-item--btn
-    opacity: 1
-  .mywork-item-tags__tag
-    color: #fff
-  .mywork-box__number:after
-    color: #fff
-  .mywork-box__number:before
-    background: #fff
-    width: 70px
-  .mywork-button
-    color: #fff
-    border: 1px solid #fff
-    &:hover
-      text-decoration: none
-      color: $black
-      background: #fff
-      border: 1px solid #fff
-
-.mywork-item-content
-  padding-left: 20px
-  padding-bottom: 40px
-  min-height: 140px
-  align-items: flex-end
-  +media-breakpoint-down(xs)
-    padding-left: inherit
-  
-.mywork-box__number
-  &:after
-    counter-increment: count
-    content: "0"counter(count)
-    color: #000
-    transition: $animate
-  &:before
-    content: ''
-    width: 40px
-    height: 1px
-    display: inline-block
-    background: #000
-    margin-bottom: 5px
-    margin-right: 4px
-    transition: $animate
-  
-.mywork-item-tags
-  margin-top: 20px
-  transition-delay: 0.5s
-.mywork-item__title
-  transition: $animate
-  transition: all ease 0.5s
-  text-transform: uppercase
-  font-weight: 700
-  font-size: 15px
-  letter-spacing: 1px
-.mywork-item-tags__tag
-  display: inline-block
-  margin-right: 10px
-  font-size: 14px
-  text-transform: uppercase
-  font-weight: 400
-  letter-spacing: 1px
-  transition: $animate
-.mywork-item-tags__tag:after
-  content: '|'
-  display: inline-block
-  margin-left: 10px
-.mywork-item-tags__tag:last-child:after
-  content: ''
-
-.mywork-item--btn
-  opacity: 0
-  position: absolute
-  right: 20px
-  bottom: 20px
-  +media-breakpoint-down(xs)
-    justify-content: flex-start
-    align-items: flex-start
 
 
 /////////////////////////////
