@@ -54,3 +54,60 @@ scrollEvents ();
 
 
 
+////
+var pictures = [
+  'gallery-tomato/tomato-red-large.jpg',
+  'gallery-tomato/tomato-yellow-large.jpg',
+  'gallery-tomato/tomato-strange-large.jpg'
+];
+
+
+var minPhoto = document.querySelectorAll('.gallery__picture-preview');
+var fullPhoto = document.querySelector('.full-picture');
+
+var addBigPhoto = function (minPhoto, pictur) {
+  minPhoto.addEventListener('click', function () {
+  fullPhoto.src = pictur;
+  
+  var photos = document.querySelectorAll('.gallery__picture-preview');
+  console.log(photos)
+  for (var j =0; j<photos.length; j++) {
+    photos[j].classList.remove('active');
+  }
+  minPhoto.classList.add('active');
+  
+  
+  });
+}
+
+for (var i =0; i<minPhoto.length; i++) {
+  
+  addBigPhoto (minPhoto[i], pictures[i]);
+  
+  }
+
+// попап
+
+// открыть по кнопке
+$('.popup-open').click(function(e) { 
+	e.preventDefault();
+  $('.main-contact-popup').fadeIn();
+  $('.popup-overlay').fadeIn();
+	$('.main-contact-popup').addClass('disabled');
+});
+
+// закрыть на крестик
+$('.popup-close').click(function(e) {
+  e.preventDefault();
+	$('.main-contact-popup').fadeOut();
+	$('.popup-overlay').fadeOut();
+});
+
+// закрыть по клику вне окна
+$(document).mouseup(function (e) { 
+	var popup = $('.main-contact-popup');
+	if (e.target!=popup[0]&&popup.has(e.target).length === 0){
+		$('.main-contact-popup').fadeOut();
+		$('.popup-overlay').fadeOut();
+	}
+});

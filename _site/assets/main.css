@@ -2975,6 +2975,120 @@ p {
   font-weight: 300;
   letter-spacing: 2px; }
 
+.popup-overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.4);
+  z-index: 200;
+  display: none; }
+
+.popup-open {
+  color: #1a1a1a; }
+
+.popup-close {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  width: 23px;
+  height: 23px;
+  cursor: pointer; }
+
+.popup-close:before {
+  content: "";
+  background-color: #000;
+  position: absolute;
+  height: 1px;
+  width: 31px;
+  top: 11px;
+  left: -4px;
+  transform: rotate(-45deg); }
+
+.popup-close:after {
+  content: "";
+  background-color: #000;
+  position: absolute;
+  height: 1px;
+  width: 31px;
+  top: 11px;
+  transform: rotate(45deg);
+  left: -4px; }
+
+.main-contact-popup {
+  z-index: 201;
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  padding: 40px;
+  box-sizing: border-box;
+  background-color: #fff;
+  box-shadow: 0 0 5px 4px rgba(0, 0, 0, 0.35);
+  display: none; }
+  @media (min-width: 576px) {
+    .main-contact-popup {
+      left: 20%;
+      right: 20%;
+      transform: none; } }
+  @media (min-width: 768px) {
+    .main-contact-popup {
+      left: 10%;
+      right: 10%;
+      padding: 80px 40px; } }
+  @media (min-width: 1200px) {
+    .main-contact-popup {
+      top: 10%;
+      left: 20%;
+      right: 20%; } }
+
+.popup-content {
+  padding: 20px 10px; }
+  @media (max-width: 767.98px) {
+    .popup-content {
+      padding: 5px 5px; } }
+
+.popup-hr {
+  width: 40px;
+  height: 4px;
+  margin: auto;
+  background-color: #af8652;
+  border: none;
+  margin-bottom: 15px; }
+
+.popup-social {
+  justify-content: center;
+  display: flex;
+  align-items: center; }
+  .popup-social .footer-social__link {
+    margin-left: 20px;
+    margin-right: 20px;
+    background-color: #fff;
+    color: #000; }
+
+.main-contact-heading__title {
+  margin-bottom: 30px; }
+  @media (max-width: 767.98px) {
+    .main-contact-heading__title {
+      font-size: 26px;
+      margin-bottom: 10px; } }
+
+.popup__title {
+  margin-bottom: 30px; }
+  @media (max-width: 767.98px) {
+    .popup__title {
+      font-size: 22px;
+      margin-bottom: 15px; } }
+
+.popup__number, .popup__adress {
+  font-weight: 600;
+  font-size: 24px; }
+  @media (max-width: 767.98px) {
+    .popup__number, .popup__adress {
+      font-weight: 400;
+      font-size: 16px; } }
+
 .site-footer {
   position: relative;
   padding-top: 40px; }
