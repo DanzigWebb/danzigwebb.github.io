@@ -10,6 +10,7 @@
     <!-- Стили плагинов -->
     <link rel="stylesheet" href="/libs/owl-carousel/owl.carousel.min.css" />
     <link rel="stylesheet" href="/libs/owl-carousel/owl.theme.default.min.css" />
+    <link rel="stylesheet" href="/libs/animate/animate.min.css">
     <!-- Библиотеки -->
     <script src="/libs/jquery/dist/jquery.min.js"></script>
     <script type="text/javascript" src="https://code.jquery.com/jquery-migrate-1.4.1.min.js"></script>
@@ -64,20 +65,20 @@
 		
 	<section class="main-screen container-fluid">
   
-  <div class="container ">
-    <div class="row main-screen-content">
+  <div class="container">
+    <div class="row main-screen-content wow bounceInDown">
       <div class="main-screen-heading">
         <h1 class="main-screen-heading__name title-2">WebControl</h1>
         <p class="main-screen-heading__footer">HTML, CSS & JS</p>
       </div>
-      <div class="main-screen-social col-12">
-        <a class="site-link" href="mailto:valverin95@gmail.com"><i class="fab fa-google" target="_blank"></i></a>
-        <a class="site-link" href="https://api.whatsapp.com/send?phone=79500247418" target="_blank"><i class="fab fa-whatsapp"></i></a>
-        <a class="site-link" href="https://vk.com/id128989093" target="_blank"><i class="fab fa-vk"></i></a>
-      </div>
       <div class="col-sm-6 main-screen-pic">
         <img src="assets/img/main.png" alt="" class="main-screen__pic">
       </div>
+    </div>
+    <div class="main-screen-social wow zoomIn">
+      <a class="site-link" href="mailto:valverin95@gmail.com"><i class="fab fa-google" target="_blank"></i></a>
+      <a class="site-link" href="https://api.whatsapp.com/send?phone=79500247418" target="_blank"><i class="fab fa-whatsapp"></i></a>
+      <a class="site-link" href="https://vk.com/id128989093" target="_blank"><i class="fab fa-vk"></i></a>
     </div>
   </div>
 </section>
@@ -86,7 +87,7 @@
 <section class="mywork">
   <div class="container">
     <div class="row">
-      <div class="mywork-heading">
+      <div class="mywork-heading wow fadeInLeft">
         <h2 class="title-1 mywork-heading__title">Оцените мою<br>работу</h2>
         <p class="mywork-heading__txt p-footer">Ниже представлены одни из лучших работ</p>
       </div>
@@ -94,7 +95,7 @@
   </div>
   <div class="row">
     <div class="col-xl-3 col-lg-6 col-md-12 mywork-box">
-      <div class="mywork-item">
+      <div class="mywork-item wow fadeInLeft">
         <div class="container-fluid">
           <div class="row mywork-item-content no-gutters">
             <div class="col-xs-12">
@@ -117,7 +118,7 @@
       </div>
     </div>
     <div class="col-xl-3 col-lg-6 col-md-12 mywork-box">
-      <div class="mywork-item">
+      <div class="mywork-item wow fadeInLeft">
         <div class="container-fluid">
           <div class="row mywork-item-content no-gutters">
             <div class="col-xs-12">
@@ -141,7 +142,7 @@
       </div>
     </div>
     <div class="col-xl-3 col-lg-6 col-md-12 mywork-box">
-      <div class="mywork-item">
+      <div class="mywork-item wow fadeInLeft">
         <div class="container-fluid">
           <div class="row mywork-item-content no-gutters">
             <div class="col-xs-12">
@@ -164,7 +165,7 @@
       </div>
     </div>
     <div class="col-xl-3 col-lg-6 col-md-12 mywork-box">
-      <div class="mywork-item">
+      <div class="mywork-item wow fadeInLeft">
         <div class="container-fluid">
           <div class="row mywork-item-content no-gutters">
             <div class="col-xs-12">
@@ -188,9 +189,15 @@
       </div>
     </div>
   </div>
+  <div class="container mywork-button-portfolio">
+    <a href="/about/portfolio" class="main-btn main-btn--white">Еще работы</a>
+  </div>
+</div>
+  
+  
 </section>
 
-<section class="services">
+<section class="services wow fadeIn">
   <div class="container">
     <h2 class="services__title title-2">Мои навыки</h2>
     <div class="services-carousel owl-carousel">
@@ -225,7 +232,7 @@
 
 <!-- что я умею -->
 
-<section class="whatcan">
+<section class="whatcan wow fadeInLeft">
   <div class="container">
     <div class="row whatcan-wrap">
       <div class="whatcan-lightbox"></div>
@@ -240,7 +247,7 @@
 
 <!-- Инструменты -->
 
-<section class="instruments services">
+<section class="instruments services wow fadeIn">
   <div class="container">
     <h2 class="services__title title-2">Инструменты</h2>
     <div class="services-carousel owl-carousel">
@@ -299,7 +306,7 @@
 <div class="popup-overlay"></div>
 
 	<!-- Контакты -->
-<footer class="site-footer">
+<footer class="site-footer wow fadeIn">
 
   <div class="container">
     <div class="row">
@@ -331,5 +338,9 @@
 </div>
 <script src="/assets/js/common.js"></script>
 <script src="/assets/js/myScripts.js"></script>
+<script src="/libs/animate/wow.min.js"></script>
+<script>
+	new WOW().init();
+</script>
 </body>
 </html>

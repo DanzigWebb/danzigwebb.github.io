@@ -2438,11 +2438,12 @@ html {
   text-align: center; }
 
 #second-page p {
-  color: #1a1a1a;
+  color: #808080;
   font-size: 16px;
-  font-weight: 400;
-  letter-spacing: 0.5px;
-  text-align: justify; }
+  font-weight: 500;
+  letter-spacing: 0.7px;
+  text-align: justify;
+  margin: 20px 0; }
 #second-page .t-center {
   text-align: center; }
 #second-page .heading-hr {
@@ -2457,6 +2458,16 @@ html {
   padding-bottom: 10px;
   border-left: 4px solid #af8652;
   font-style: italic; }
+
+.page-content {
+  margin-top: 60px; }
+  .page-content p {
+    padding-left: 10px; }
+  .page-content .main-btn {
+    margin-top: 40px; }
+
+.page-content__title {
+  margin: 40px 0; }
 
 .animated {
   webkit-animation-duration: 0.7s;
@@ -2633,6 +2644,11 @@ section {
       justify-content: flex-start;
       align-items: flex-start; } }
 
+.mywork-button-portfolio {
+  display: flex;
+  justify-content: center;
+  padding: 20px 0; }
+
 #second-page .mywork-box:hover .mywork-item-tags__tag {
   color: #fff; }
 
@@ -2782,16 +2798,20 @@ p {
 
 .main-screen-social {
   position: absolute;
-  left: 10px;
-  width: 40px; }
+  left: 20px;
+  top: 0;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  flex-direction: column; }
   .main-screen-social .fa-whatsapp {
     font-weight: 700;
     font-size: 18px; }
   @media (max-width: 575.98px) {
     .main-screen-social {
       position: inherit;
-      display: flex;
-      justify-content: center; } }
+      justify-content: center;
+      flex-direction: row; } }
   .main-screen-social a {
     display: block;
     margin: 40px 0;

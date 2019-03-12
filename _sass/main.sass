@@ -150,15 +150,19 @@ header
   position: relative
 .main-screen-social
   position: absolute
-  left: 10px
-  width: 40px 
+  left: 20px
+  top: 0
+  bottom: 0
+  display: flex
+  justify-content: center
+  flex-direction: column
   .fa-whatsapp
     font-weight: 700
     font-size: 18px
   +media-breakpoint-down(xs)
     position: inherit
-    display: flex
     justify-content: center
+    flex-direction: row
   a
     display: block
     margin: 40px 0
