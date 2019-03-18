@@ -1,9 +1,10 @@
 // мобильное меню
+let buttonMenu = document.querySelector('.my-menu-button');
+let sidebar = document.querySelector('.sidebar');
+let sidebarLinks = sidebar.querySelectorAll('.sidebar-menu__link');
+
 function openSidebar () {
-  let buttonMenu = document.querySelector('.my-menu-button');
-  let sidebar = document.querySelector('.sidebar');
-  let sidebarLinks = sidebar.querySelectorAll('.sidebar-menu__link');
-  console.log(sidebarLinks)
+
   buttonMenu.onclick = function(e) {
     // задержка анимации гамбургера
     function openOnClick () {
@@ -25,3 +26,21 @@ function openSidebar () {
   }
 }
 openSidebar ();
+
+
+// активная ссылка при перезагрузке страницы
+function takeLink () {
+  for (let j = 0; j<sidebarLinks.length; j++) {
+    sidebarLinks[j].classList.remove('site-link--active');
+  };
+  for (let i = 0; i<sidebarLinks.length; i++) {
+    let linksUrl = sidebarLinks[i].href;
+    if (linksUrl == window.location.href) {
+      sidebarLinks[i].classList.add('site-link--active');
+    };
+    if ('https://danzigwebb.github.io/' == window.location.href || 'https://danzigwebb.github.io' == window.location.href) {
+      sidebarLinks[0].classList.add('site-link--active');
+    };
+  };
+};
+takeLink ();
