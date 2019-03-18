@@ -2001,6 +2001,9 @@ b, strong {
   left: 1px;
   width: 100%;
   filter: grayscale(40%) brightness(50%) blur(1px); }
+  @media (max-width: 575.98px) {
+    .bg-home {
+      left: 0; } }
 
 .mainscreen-heading {
   position: relative;
