@@ -1,34 +1,14 @@
-<!DOCTYPE html>
-<html lang="ru">
+---
+layout: default
+---
+<article class="post">
 
-{% include head.html %}
+  <header class="post-header">
+    <h1 class="post-title">{{ page.title | escape }}</h1>
+  </header>
 
-  <body>
-  <div id="second-page">
-    {% include header.html %}
-
-    <section class="main-screen container-fluid">
-      <div class="container ">
-        <div class="row main-screen-content wow bounceInDown">
-          <div class="main-screen-heading">
-            <h1 class="main-screen-heading__name title-2 t-center">{{ page.title}}</h1>
-          </div>
-          <div class="col-sm-6 main-screen-pic">
-          <img src="/assets/img/main.png" alt="">
-          </div>
-        </div>
-      </div>
-    </section>
-      
-    {% include mypage/{{ page.link }}.html %}
-
-    {% include footer.html %}
+  <div class="post-content">
+    {{ content }}
   </div>
-    <script src="/assets/js/common.js"></script>
-    <script src="/assets/js/myScripts.js"></script>
-    <script src="/libs/animate/wow.min.js"></script>
-      <script>
-        new WOW().init();
-      </script>
-  </body>
-</html>
+
+</article>

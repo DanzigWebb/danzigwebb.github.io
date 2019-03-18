@@ -1,12 +1,8 @@
 @import "vars"
-@import "fonts"
 @import "libs"
-@import "norm"
-
-// страницы
-
-@import "pages/portfolio"
-
+@font-face
+  font-family: 'Pe-icon-7-stroke'
+  src: url("fonts/Pe-icon-7-stroke.woff")
 ::placeholder
   color: #666
 
@@ -18,10 +14,11 @@ body
   font-size: 16px
   min-width: 320px
   position: relative
-  font-family: 'Montserrat', sans-serif
   line-height: 1.65
+  font-family: 'PT Sans', sans-serif
   overflow-x: hidden
   color: $text
+  background-color: #e7e7e7
   input, textarea
     border: #666 1px solid
     outline: none
@@ -30,6 +27,41 @@ body
     &:required:valid
       border-color: green
 
+h1, h2, h3, h4, h5
+  font-family: 'Oswald', sans-serif
+  font-weight: 400
+p
+  font-size: 0.875em
+  margin: 0 0 10px
+  font-weight: 300
+  color: #666
+  
+.title-1
+  font-size: 70px
+.title-2
+  font-size: 30px
+.title-3
+  font-size: 1.17em
+.title-4
+  font-size: 1.17em
+  border-bottom: 2px solid $accent
+  display: inline-block
+  padding-bottom: 2px
+  margin-bottom: $gutter
+.title-5
+  font-size: 0.875em
+  line-height: 1.1em
+  position: relative
+  margin: 0 0 5px
+
+
+.p-footer
+  padding: 0
+  margin: 0
+  color: $gray
+  font-size: 18px
+  font-family: 'Oswald', sans-serif
+  font-weight: 300
 .img-responsive
   display: block
   max-width: 100%
@@ -42,452 +74,469 @@ body
 
 b, strong
   font-weight: bold
-p
-  color: #171717
-  font-weight: 300
-// сайдбар меню || хедер
-// иконки
-.hamburger.is-active .hamburger-inner, .hamburger.is-active .hamburger-inner::before, .hamburger.is-active .hamburger-inner::after
+
+
+
+//кастомный код
+// subpage
+
+.subpage
+  padding: 60px
   background-color: #fff
-  position: fixed
-  top: 20px
-header
-.header-icons
-  display: flex
-  justify-content: space-between
-  align-items: center
-  padding: 0 10px
-  width: 100%
-  
-.header-icons--is-active
-  position: sticky
-  top: 0
-  z-index: 102
-.my-menu-button
-  right: 40px
-  top: 20px
-  z-index: 101
-  
-.header-logo__link
-  left: 40px
-  top: 20px
-  img
-    width: 45px
-    height: 45px
-
-.mysidebar-social
-  position: absolute
-  left: 10px
-  display: block
-  width: 20px
-  a
-    margin: 40px 0
-    display: block
-    color: #fff
-  .fa-whatsapp
-    font-weight: 500
-    font-size: 18px
-  
-.mysidebar
-  position: fixed
-  top: 0
-  left: -100%
-  width: 100%
-  height: 100vh
-  background-color: #262626
-  display: flex
-  justify-content: center
-  align-items: center
-  transition: $animate
-  z-index: 100
-.mysidebar.is-active
-    left: 0
-    z-index: 100
-.sidebar-menu
-  margin: 0
-  padding: 0
-  counter-reset: count
-  li
-    list-style: none
-    text-align: center
-.sidebar-menu__link
-  color: #fff
-  font-weight: 700
-  letter-spacing: 2px
-  text-transform: uppercase
-  font-size: 35px
-  display: block
-  margin: 10px
   position: relative
-  z-index: 1
+  transition: all 0.8s ease-in-out
   +media-breakpoint-down(xs)
-    font-size: 28px
+    padding: 15px
   
-.sidebar-menu__link:after
-  counter-increment: count
-  content: "0" counter(count) ""
-  position: absolute
-  left: 30%
-  font-size: 70px
-  font-weight: 800
-  z-index: -1
-  top: 0
-  line-height: 70%
-  color: rgba(109, 109, 109, 0.3)
-  opacity: 0
-  transition: $animate
-.sidebar-menu__link:hover:after
-  opacity: 1
 
-/////////////////////////////
-// главный экран
-/////////////////////////////
-
-.main-screen
-  height: 550px
+.subpage-heading
   display: flex
   align-items: center
-  position: relative
-.main-screen-social
-  position: absolute
-  left: 20px
-  top: 0
-  bottom: 0
-  display: flex
-  justify-content: center
-  flex-direction: column
-  .fa-whatsapp
-    font-weight: 700
-    font-size: 18px
-  +media-breakpoint-down(xs)
-    position: inherit
-    justify-content: center
-    flex-direction: row
-  a
-    display: block
-    margin: 40px 0
-    width: 20px
-    +media-breakpoint-down(xs) 
-      display: inline-block
-      margin: 20px 40px
-.main-screen-content
-  display: flex
-  justify-content: center
-  align-items: center
-
-.main-screen__pic
-  width: 100%
-  max-width: 500px
-  +media-breakpoint-down(xs)
-    width: 60%
-.main-screen-pic
-  +media-breakpoint-down(xs)
-    display: flex
-    justify-content: center
-    align-items: center
-  img 
-    width: 100%
-    +media-breakpoint-down(xs)
-      width: 60%
-
-.main-screen-heading__name
-  font-weight: 500
-.main-screen-heading__footer
-  font-weight: 500
-  text-align: center
-  font-size: 16px
-  letter-spacing: 7px
-.main-screen-heading
-  position: relative
-  left: 50px
-  +media-breakpoint-down(xs) 
-    left: 0
-
-//корректировка для страниц
-#my-page
-  .main-screen-heading
-    +media-breakpoint-down(md) 
-      left: 0
-      text-align: center
-
-
-
-
-/////////////////////////////
-// карусель навыков
-/////////////////////////////
-.services
-  padding-bottom: 30px
-  .owl-dots
-    margin-top: 20px
-  .owl-dot
-    span 
-      height: 15px
-      width: 15px
-      background-color: #dedede
-      display: block
-      margin-right: 10px
-      border-radius: 50%
-  .active
-    span
-      background-color: $accent
-  .owl-nav
-    position: absolute
-    top: -120px
-    left: 400px
-    +media-breakpoint-down(xs)
-      left: 20px
-      top: -60px
-    .fa-arrow-right:before
-      font-size: 34px
-      margin-left: 25px
-    .fa-arrow-left:before
-      font-size: 34px
-      margin-right: 25px
-.services__title
-  margin-bottom: 80px
-.services-item__title
-  font-size: 22px
-  font-weight: 600
   font-family: 'Oswald', sans-serif
-  text-align: center
-.services-item__txt
-  text-align: center
-.services-item__svg
-  height: 100px
-  width: 100px
-  margin-bottom: 20px
-  fill: #5e5e5e
-  transition: $animate
-  display: block
-  margin: auto
-  margin-bottom: 30px
-.services-item:hover
-  .services-item__svg
-    fill: $accent
-  
-// обо мне
-.whatcan-wrap
-  justify-content: center
-  align-items: center
-  position: relative
-.whatcan-content__title
-  margin-bottom: $gutter
-.whatcan-img
-  overflow: hidden
-  +media-breakpoint-down(sm)
-    margin-bottom: 20px
-  img
-    +media-breakpoint-down(sm)
-      width: 100%
-  &:after
-    content: ''
-    height: 100%
-    width: 140%
-    background-color: #dedede
-.whatcan-lightbox
-  position: absolute
-  height: 100%
-  width: 75%
-  left: 15px
-  display: block
-  background: rgba(222,222,222,0.6)
-  z-index: -1
-  +media-breakpoint-down(sm)
-    display: none
-
-.whatcan-content__txt
-  position: relative
-  padding-left: 70px
-  +media-breakpoint-down(xs)
-    padding-left: 40px
-  &:before
-    content: ""
-    width: 60px
-    height: 7px
-    background-color: #dedede
-    display: block
-    position: absolute
-    top: 10px
-    left: 0
-    +media-breakpoint-down(xs)
-      width: 30px
-
-/////////////////////////////
-// инструменты
-/////////////////////////////
-.instruments
-  padding-bottom: 80px
-  .fab
-    font-size: 90px
-    color: #5e5e5e
-    text-align: center
-    transition: $animate
-    &:hover
-      color: $accent
-.instruments-item
-  display: flex
-  justify-content: center
-
-
-/////////////////////////////
-// футер
-/////////////////////////////
-// контакт
-.main-contact
-  background-color: $black
-  padding: 60px 10px
-  text-align: center
-  color: #fff
-.main-contact__txt
-  font-weight: 300
-  letter-spacing: 2px
-
-// попап
-.popup-overlay
-  position: absolute
-  width: 100%
-  height: 100%
-  top: 0
-  left: 0
-  background-color: rgba(0,0,0, 0.4)
-  z-index: 200
-  display: none
-
-.popup-open
-  color: $black
-.popup-close
-  position: absolute
-  top: 15px
-  right: 15px
-  width: 23px
-  height: 23px
-  cursor: pointer
-
-.popup-close:before
-  content: ''
-  background-color: #000
-  position: absolute
-  height: 1px
-  width: 31px
-  top: 11px
-  left: -4px
-  transform: rotate(-45deg)
-
-.popup-close:after 
-  content: ''
-  background-color: #000
-  position: absolute
-  height: 1px
-  width: 31px
-  top: 11px
-  transform: rotate(45deg)
-  left: -4px
-
-
-.main-contact-popup
-  z-index: 201
-  position: fixed
-  left: 50%
-  top: 50%
-  transform: translate(-50%, -50%)
-  padding: 40px
-  box-sizing: border-box
-  background-color: #fff
-  box-shadow: 0 0 5px 4px rgba(0, 0, 0, 0.35)
-  display: none
-  +media-breakpoint-up(sm)
-    left: 20%
-    right: 20%
-    transform: none
-  +media-breakpoint-up(md)
-    left: 10%
-    right: 10%
-    padding: 80px 40px
-  +media-breakpoint-up(xl)
-    top: 10%
-    left: 20%
-    right: 20%
-
-.popup-content
-  padding: 20px 10px
-  +media-breakpoint-down(sm)
-    padding: 5px 5px
-.popup-hr
-  width: 40px
-  height: 4px
-  margin: auto
-  background-color: $accent
-  border: none
-  margin-bottom: 15px
-.popup-social
-  justify-content: center
-  display: flex
-  align-items: center
-  .footer-social__link
-    margin-left: 20px
-    margin-right: 20px
-    background-color: #fff
-    color: #000
-.main-contact-heading__title
-  margin-bottom: 30px
-  +media-breakpoint-down(sm)
-    font-size: 26px
-    margin-bottom: 10px
-.popup__title
-  margin-bottom: 30px
-  +media-breakpoint-down(sm)
-    font-size: 22px
-    margin-bottom: 15px
-.popup__number, .popup__adress
-  font-weight: 600
-  font-size: 24px
-  +media-breakpoint-down(sm)
-    font-weight: 400
-    font-size: 16px
-
-
-.site-footer
-  position: relative
-  padding-top: 40px
-.footer-menu
-  li
-    list-style: none
-    margin-top: 8px
-.footer-menu__link
-  letter-spacing: 0.5px
-  font-weight: 500
-  font-size: 16px
-  color: $black
-.footer__title
-  margin-bottom: 40px
-.footer-social
-  display: flex
-  align-items: center
-  .fa-whatsapp
-    font-size: 23px
-    line-height: 22px
-.footer-social__link
-  margin-right: 30px
-  width: 40px
-  height: 40px
-  background-color: $black
-  color: #fff
-  padding: 10px
-  border-radius: 100%
-  display: block
-  line-height: 24px
-  text-align: center
-  font-size: 18px
-  &:hover
+  margin-bottom: 2*$gutter
+  &__title
+    padding: 7px 20px 7px 78px
     background-color: $accent
     color: #fff
+    font-size: 22px
+    position: relative
+    margin-left: -70px
+    margin-right: $gutter
+    display: inline-block
+    &:before
+      display: block
+      width: 10px
+      height: 0px
+      position: absolute
+      bottom: -10px
+      left: 0px
+      content: ""
+      border-bottom: 10px solid transparent
+      border-right: 10px solid #ebbd34
 
-.footer-special
-  margin-top: 40px
-  padding: 20px 10px
-  border-top: 1px solid #dedede
-  text-align: right
+  &__descr
+    color: #9c9c9c
+    font-size: 14px
+
+// переход по страницам
+
+#sub-aboutme:target, #sub-resume:target, #sub-portfolio:target,
+  transform: translate3d(0, 0, 0) scaleY(1)
+  z-index: 9
+  min-height: 100vh
+  height: auto
+  .mainscreen
+    position: absolute
+    transform: translate3d(0, -100%, 0) scaleY(0)
+    top: 0
+    min-height: 100%
+    height: auto
+    overflow: visible
+    width: 100%
+
+.aboutme, .resume, .portfolio
+  position: absolute
+  transform: translate3d(0, -100%, 0) scaleY(0)
+  top: 0
+  min-height: 100%
+  height: auto
+  overflow: visible
+  
+  width: 100%
+  
+
+
+//мобильный хедер
+.mobile-header
+  height: 46px
+  width: 100%
   background-color: #fff
-// всегда в конце
+  display: flex
+  justify-content: flex-end
+  align-items: center
+  position: relative
+  +media-breakpoint-up(lg)
+    display: none
+  +media-breakpoint-down(md)
+    z-index: 12
+    position: fixed
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.4)
+.sidebar
+  text-align: center
+  width: 22%
+  margin-right: $gutter /2
+  background-color: #fff
+  padding: 40px 0
+  position: fixed
+  height: 100%
+  overflow: auto
+  z-index: 10
+  transition: 0.7s ease all
+  +media-breakpoint-down(md)
+    width: 100%
+    max-width: 320px
+    left: -100%
+    padding-top: 56px
+    padding-bottom: 40px
+.sidebar.is-active
+  left: 0
+  box-shadow: 3px 0 4px rgba(0, 0, 0, 0.4)
+
+// гамбургер
+.hamburger-inner, .hamburger-inner::before, .hamburger-inner::after
+  width: 34px
+  height: 3px
+
+.sidebar__avatar
+  max-width: 110px
+  margin: auto
+  margin-bottom: 30px
+.sidebar__name
+  color: $h-color
+  margin: 0
+  line-height: 0
+  line-height: 40px
+.sidebar-menu
+  margin-top: 2*$gutter
+  ul 
+    margin: 0
+    padding: 0
+  li
+    list-style: none
+.sidebar-menu__link
+  font-family: 'Oswald', sans-serif
+  color: $h-color
+  padding: 10px 20px
+  display: block
+  border-top: 1px solid #f5f5f5
+  border-bottom: 1px solid #f5f5f5
+  transition: $anim
+  border-right: 3px solid #fff
+  font-weight: 400
+  font-size: 16px
+.sidebar-menu__link:hover
+  background-color: #fcfcfc
+  color: $h-color
+  text-decoration: none
+  border-right: 3px solid #f5f5f5
+  box-shadow: inset 0 0 1px 2px rgba(0, 0, 0, 0.02)
+.sidebar-menu__link.site-link--active
+  border-right: 4px solid $accent
+  background-color: #fcfcfc
+  box-shadow: inset 0 0 1px 2px rgba(0, 0, 0, 0.02)
+.sidebar-social
+  margin-top: 2*$gutter
+  .fab
+    display: inline-block
+    margin: 0 2px
+    width: 28px
+    height: 28px
+    line-height: 28px
+    color: #888
+    background-color: #eee
+    text-align: center
+    transition: $anim
+    &:hover
+      color: #fff
+      background-color: $accent
+
+// main content
+.main-content
+  width: 77%
+  min-height: 100%
+  height: auto
+  position: relative
+  +media-breakpoint-down(md)
+    width: 100%
+    margin-top: 46px
+.page-content
+  display: flex
+  justify-content: flex-end
+
+
+
+// mainscreen
+
+.mainscreen
+  display: flex
+  justify-content: center
+  align-items: center
+  min-height: 100vh
+  height: auto
+  width: 100%
+  position: absolute
+  top: 0
+.bg-home
+  background-image: url(https://lmpixels.com/demo/sunshine-demo/sunshine-version-2/sunshine-html-template/images/home_page_bg_2.jpg)
+  background-size: cover
+  background-position: center center
+  position: absolute
+  top: 0
+  height: 100%
+  left: 0
+  width: 100%
+  filter: grayscale(40%) brightness(50%) blur(1px)
+.mainscreen-heading
+  position: relative
+  color: #fff
+  p 
+    margin-bottom: 10px
+    color: #fff
+
+.mainscreen-heading__title
+  margin-bottom: 3*$gutter
+  font-weight: 500
+.mainscreen-heading__special
+  font-family: 'Oswald', sans-serif
+  font-size: 16px
+  border-bottom: 3px solid $accent
+  font-weight: 400
+  margin-right: 40px
+  letter-spacing: 0.5px
+  display: inline-block
+  width: 50px
+  
+// about me
+.aboutme-heading
+  margin-bottom: 2*$gutter
+.aboutme-services
+  margin-bottom: 2*$gutter
+.aboutme-services-item
+  text-align: center
+  img
+    max-height: 74px
+    margin-bottom: $gutter
+
+.aboutme-facts-item
+  text-align: center
+  padding: 20px 10px 15px
+  margin-right: -10px
+  .pe-7s-icon
+    font-size: 56px
+    color: #888
+.aboutme-facts-wrap
+  box-shadow: 0 0 3px 1px rgba(0, 0, 0, 0.1)
+  padding: 10px 0
+.aboutme-facts-wrap--gray
+  background-color: #fafafa
+.aboutme-facts-item__number
+  font-size: 24px
+  color: $accent
+  font-weight: 600
+
+// resume
+.resume
+  .title-4
+    +media-breakpoint-down(xs)
+      margin-bottom: 2*$gutter
+.resume-column
+  padding: 0 15px
+  +media-breakpoint-down(xs)
+    padding: 0
+.resume-item
+  margin-bottom: $gutter
+.resume-date
+  display: inline-block
+  position: relative
+  color: #fff
+  font-weight: 300
+  line-height: 1.1em
+  margin: 0 0 10px
+  background-color: #9bd952
+  padding: 5px 8px 5px 23px
+  margin-left: -23px
+  &:after
+    display: block
+    width: 3px
+    height: 100%
+    position: absolute
+    bottom: 3px
+    left: -3px
+    content: ""
+    transform: skew(0deg,65deg)
+    -ms-transform: skew(0deg,65deg)
+    -webkit-transform: skew(0deg,65deg)
+    -o-transform: skew(0deg,65deg)
+    -moz-transform: skew(0deg,65deg)
+    background: #8cc44b
+.resume-title
+  margin: 0
+.resume__descr
+  color: #a5a5a5
+  margin: 0 0 10px
+  font-size: 12px
+  font-weight: 300
+  line-height: 1.45em
+
+
+.resume-skill-container
+  background-color: transparent
+  border: 2px solid #ffcd38
+  -moz-border-radius: 8px
+  -webkit-border-radius: 8px
+  border-radius: 8px
+  -webkit-box-sizing: border-box
+  -moz-box-sizing: border-box
+  box-sizing: border-box
+  height: 14px
+  margin-bottom: 12px
+  width: 90%
+  .skill-1
+    width: 87%
+  .skill-2
+    width: 83%
+  .skill-3
+    width: 38%
+  .skill-4
+    width: 65%
+  .skill-5
+    width: 86%
+  .skill-6
+    width: 96%
+  .skill-7
+    width: 74%
+.resume-skill-percentage
+  background-color: #ffcd38
+  border: 2px solid #fff
+  -moz-border-radius: 9px
+  -webkit-border-radius: 9px
+  border-radius: 9px
+  height: 10px
+  padding: 0
+  transition: all 2.5s ease-in-out
+  
+
+
+// portfolio
+.portfolio
+  counter-reset: count
+.mywork-item
+  border-radius: 5px
+  padding: 80px 0
+  z-index: 1
+  background-size: cover
+  background-position: center center
+  position: relative
+  min-height: 220px
+  overflow: hidden
+  margin-bottom: 2*$gutter
+.mywork-item--avatar
+  background-image: url(img/portfolio/avatar.jpg)
+.mywork-item--grocmart
+  background-image: url(img/portfolio/grocmart.jpg)
+.mywork-item--tatoo
+  background-image: url(img/portfolio/tatoo.jpg)
+.mywork-item--melody
+  background-image: url(img/portfolio/melody.jpg)
+.mywork-item--kitchen
+  background-image: url(img/portfolio/kitchen.jpg)
+.mywork-item--exploring
+  background-image: url(img/portfolio/exploring.jpg)
+.mywork-item--homeville
+  background-image: url(img/portfolio/homeville.jpg)
+.mywork-item--childcare
+  background-image: url(img/portfolio/childcare.jpg)
+.mywork-item--lege-artis
+  background-image: url(img/portfolio/lege-artis.jpg)
+.mywork-item--sunset
+  background-image: url(img/portfolio/sunset.jpg)
+.mywork-item:hover
+  .mywork-item-content
+    opacity: 1
+    transform: translate3d(0, 0, 0) scaleY(1)
+  .mywork-item__title
+    color: #fff
+  .mywork-item--btn
+    opacity: 1
+  .mywork-item-tags__tag
+    color: #fff
+  .mywork-item__number:before
+    background: #fff
+    width: 70px
+  .mywork-item--btn
+    transform: scaleY(1)
+    
+.mywork-button
+  color: #fff
+  border: 1px solid #fff
+  padding: 4px 10px
+  font-family: 'Oswald', sans-serif
+  font-size: 13px
+  transition: $anim
+  &:hover
+    text-decoration: none
+    color: $black
+    background: #fff
+    border: 1px solid #fff
+.mywork-item-content
+  height: 100%
+  width: 100%
+  align-items: center
+  padding-left: $gutter
+  opacity: 0
+  color: #fff
+  background-color: rgba(0, 0, 0, 0.6)
+  transition: $anim
+  position: absolute
+  top: 0
+  transform: translate3d(0, 100%, 0) scaleY(0)
+  +media-breakpoint-down(xs)
+    padding-left: inherit
+  
+.mywork-box__number
+  display: block
+  color: #fff
+  &:after
+    counter-increment: count
+    content: "0"counter(count)
+    color: #fff
+    transition: $anim
+    font-family: 'Oswald', sans-serif
+  &:before
+    content: ''
+    width: 40px
+    height: 1px
+    display: inline-block
+    background: #fff
+    margin-bottom: 5px
+    margin-right: 4px
+    transition: $anim
+  
+.mywork-item-tags
+  color: #a5a5a5
+  margin: 0 0 10px
+  font-size: 12px
+  font-weight: 300
+  line-height: 1.45em
+
+.mywork-item__title
+  transition: $anim
+  transition: all ease 0.5s
+  text-transform: uppercase
+  margin-bottom: 15px
+  font-weight: 400
+  font-size: 15px
+  letter-spacing: 1px
+.mywork-item-tags__tag
+  display: inline-block
+  margin-right: 10px
+  font-size: 14px
+  text-transform: uppercase
+  font-weight: 400
+  letter-spacing: 1px
+  transition: $anim
+.mywork-item-tags__tag:after
+  content: '|'
+  display: inline-block
+  margin-left: 10px
+.mywork-item-tags__tag:last-child:after
+  content: ''
+
+.mywork-item--btn
+  opacity: 0
+  transform: scaleY(0)
+  position: absolute
+  right: 20px
+  bottom: 20px
+
 @import "media"

@@ -1,60 +1,54 @@
 <!DOCTYPE html>
 <html lang="ru"><head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <link rel="stylesheet" href="/assets/main.css" />
-    <link href="https://fonts.googleapis.com/css?family=Montserrat:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i|Oswald:400,500,600,700&amp;subset=cyrillic" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="assets/main.css" />
+    <link rel="stylesheet" href="https://lmpixels.com/demo/sunshine-demo/sunshine-version-1/sunshine-v1-html-template/css/pe-icon-7-stroke.css" />
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Oswald:200,300,400,500,600,700|PT+Sans:400,700&amp;subset=cyrillic" rel="stylesheet">
     <!-- Стили плагинов -->
-    <link rel="stylesheet" href="/libs/owl-carousel/owl.carousel.min.css" />
-    <link rel="stylesheet" href="/libs/owl-carousel/owl.theme.default.min.css" />
-    <link rel="stylesheet" href="/libs/animate/animate.min.css">
+    <link rel="stylesheet" href="libs/owl-carousel/owl.carousel.min.css" />
+    <link rel="stylesheet" href="libs/owl-carousel/owl.theme.default.min.css" />
     <!-- Библиотеки -->
-    <script src="/libs/jquery/dist/jquery.min.js"></script>
-    <script type="text/javascript" src="https://code.jquery.com/jquery-migrate-1.4.1.min.js"></script>
+    <script src="libs/jquery/dist/jquery.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
     <!-- Плагины js -->
-    <script src="/libs/owl-carousel/owl.carousel.min.js"> </script>
+    <script src="libs/owl-carousel/owl.carousel.min.js"> </script>
+    <script src="assets/js/common.js"></script>
 
     <title>Your awesome title</title>
     <meta name="description" content="">
 </head>
-<body><div class="border-wrapper">
-    <div class="row border-row">
-        <div class="border col-lg-2 col-sm-3 col-xs-4"></div>
-        <div class="border col-lg-2 col-sm-3 col-xs-4"></div>
-        <div class="border col-lg-2 col-sm-3 col-xs-4"></div>
-        <div class="border col-lg-2 col-sm-3 col-xs-4"></div>
-        <div class="border col-lg-2 col-sm-3 col-xs-4"></div>
-        <div class="border col-lg-2 col-sm-3 col-xs-4"></div>
-    </div>
-</div>
+<body>
 
-<nav class="header-icons">
-  <div class="header-logo">
-    <a href="/" class="header-logo__link">
-      <img src="/assets/img/logo.png" alt="Логотип">
-    </a>
+<header>
+  <div class="sidebar">
+    <img src="https://lmpixels.com/demo/sunshine-demo/sunshine-version-2/sunshine-html-template/images/my_photo.png" alt="" class="sidebar__avatar img-responsive">
+    <h2 class="sidebar__name title-2">Александр Марченко</h3>
+    <p class="sidebar__txt p-footer">Веб Разработчик</p>
+    <nav class="sidebar-menu">
+      <ul>
+        <li><a href="#sub-mainscreen" class="sidebar-menu__link site-link--active">Главная</a></li>
+        <li><a href="#sub-aboutme" class="sidebar-menu__link">Обо мне</a></li>
+        <li><a href="#sub-resume" class="sidebar-menu__link">Резюме</a></li>
+        <li><a href="#sub-portfolio" class="sidebar-menu__link">Портфолио</a></li>
+      </ul>
+    </nav>
+    <div class="sidebar-social">
+      <a class="site-link" href="mailto:valverin95@gmail.com"><i class="fab fa-google" target="_blank"></i></a>
+      <a class="site-link" href="https://api.whatsapp.com/send?phone=79500247418" target="_blank"><i class="fab fa-whatsapp"></i></a>
+      <a class="site-link" href="https://vk.com/id128989093" target="_blank"><i class="fab fa-vk"></i></a>
+    </div>
   </div>
+</header>
+
+<!-- mobile -->
+
+<div class="mobile-header fixed-top">
   <a class="hamburger hamburger--spring my-menu-button">
     <span class="hamburger-box"><span class="hamburger-inner"></span></span>
   </a>
-</nav>
-<header>
-<div class="mysidebar">
-  <div class="mysidebar-social">
-    <a class="site-link" href="mailto:valverin95@gmail.com"><i class="fab fa-google" target="_blank"></i></a>
-    <a class="site-link" href="https://api.whatsapp.com/send?phone=79500247418" target="_blank"><i class="fab fa-whatsapp"></i></a>
-    <a class="site-link" href="https://vk.com/id128989093" target="_blank"><i class="fab fa-vk"></i></a>
-  </div>
-  <ul class="sidebar-menu">
-    <li><a href="/" class="sidebar-menu__link site-link">Главная</a></li>
-    <li><a href="/about" class="sidebar-menu__link site-link">Обо мне</a></li>
-    <li><a href="/about/portfolio" class="sidebar-menu__link site-link">Портфолио</a></li>
-    <li><a href="/about/contact" class="sidebar-menu__link site-link">Контакты</a></li>
-  </ul>
-</div>
-</header><main class="page-content" aria-label="Content">
+</div><main class="page-content" aria-label="Content">
       <div class="wrapper">
         <style type="text/css" media="screen">
   .container {
@@ -78,35 +72,6 @@
 </div>
 
       </div>
-    </main><!-- Контакты -->
-<footer class="site-footer wow fadeIn">
-
-  <div class="container">
-    <div class="row">
-      <div class="col-lg-4 col-md-6 col-sm-12">
-        <h4 class="footer__title title-3">Меню</h4>
-        <ul class="footer-menu">
-          <li><a href="/" class="footer-menu__link site-link">Главная</a></li>
-          <li><a href="/about" class="footer-menu__link site-link">Обо мне</a></li>
-          <li><a href="/about/portfolio" class="footer-menu__link site-link">Портфолио</a></li>
-          <li><a href="/about/contact" class="footer-menu__link site-link">Контакты</a></li>
-        </ul>
-      </div>
-      <div class="col-lg-4 col-md-6 col-sm-12">
-        <h4 class="footer__title title-3">Новости</h4>
-      </div>
-      <div class="col-lg-4 col-md-6 col-sm-12">
-        <h4 class="footer__title title-3">Соц. сети</h4>
-          <div class="footer-social">
-            <a class="site-link footer-social__link" href="mailto:valverin95@gmail.com"><i class="fab fa-google" target="_blank"></i></a>
-            <a class="site-link footer-social__link" href="https://api.whatsapp.com/send?phone=79500247418" target="_blank"><i class="fab fa-whatsapp"></i></a>
-            <a class="site-link footer-social__link" href="https://vk.com/id128989093" target="_blank"><i class="fab fa-vk"></i></a>
-          </div>
-      </div>
-      <div class="col"><p class="footer-special"></p></div>
-      
-    </div>
-  </div>
-</footer></body>
+    </main></body>
 
 </html>

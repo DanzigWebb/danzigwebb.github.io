@@ -12,16 +12,11 @@ description: это мой сайт-портфолио, на котором я �
 
 <div id="my-page">
 	{% include header.html %}
-		
-	{% include mypage/mainpage.html %}
-
+	<div class="page-content">
+			{% include mypage/mainpage.html %}
+	</div>
 	{% include footer.html %}
 </div>
-<script src="/assets/js/common.js"></script>
-<script src="/assets/js/myScripts.js"></script>
-<script src="/libs/animate/wow.min.js"></script>
-<script>
-	new WOW().init();
-</script>
+<script src="assets/js/myScripts.js"></script>
 </body>
 </html>
