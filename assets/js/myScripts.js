@@ -44,3 +44,10 @@ function takeLink () {
   };
 };
 takeLink ();
+
+// фикс бага ховера на айфон
+
+let fixHoverOnIphone = document.querySelectorAll('.mywork-item');
+for (let i =0;i<fixHoverOnIphone.length; i++){
+  fixHoverOnIphone[i].onclick = "";
+}
