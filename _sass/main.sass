@@ -443,21 +443,34 @@ b, strong
 .mywork-item--sunset
   background-image: url(img/portfolio/sunset.jpg)
 .mywork-item:hover, .mywork-item:active
-  .mywork-item-content
-    opacity: 1
-    transform: translate3d(0, 0, 0) scaleY(1)
-  .mywork-item__title
-    color: #fff
-  .mywork-item--btn
-    opacity: 1
-  .mywork-item-tags__tag
-    color: #fff
-  .mywork-item__number:before
-    background: #fff
-    width: 70px
-  .mywork-item--btn
-    transform: scaleY(1)
-    
+  +media-breakpoint-up(sm)
+    .mywork-item-content
+      opacity: 1
+      transform: translate3d(0, 0, 0) scaleY(1)
+    .mywork-item__title
+      color: #fff
+    .mywork-item--btn
+      opacity: 1
+    .mywork-item-tags__tag
+      color: #fff
+    .mywork-item__number:before
+      background: #fff
+      width: 70px
+@media (max-width: 575.98px)
+  body
+    .mywork-item-content
+        opacity: 1
+    .mywork-item__title
+      color: #fff
+    .mywork-item--btn
+      opacity: 1
+    .mywork-item-tags__tag
+      color: #fff
+    .mywork-item__number:before
+      background: #fff
+      width: 70px
+    .mywork-item--btn
+      transform: scaleY(1)
 .mywork-button
   color: #fff
   border: 1px solid #fff
@@ -536,7 +549,6 @@ b, strong
 
 .mywork-item--btn
   opacity: 0
-  transform: scaleY(0)
   position: absolute
   right: 20px
   bottom: 20px

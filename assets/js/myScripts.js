@@ -46,8 +46,15 @@ function takeLink () {
 takeLink ();
 
 // фикс бага ховера на айфон
-
-let fixHoverOnIphone = document.querySelectorAll('.mywork-item');
-for (let i =0;i<fixHoverOnIphone.length; i++){
-  fixHoverOnIphone[i].onclick = "";
+if(~['Android', 'iPhone', 'iPod', 'iPad', 'BlackBerry'].indexOf(navigator.platform)){
+  let portfolioItem = document.querySelectorAll('.mywork-item');
+  for (let i =0;i<portfolioItem.length; i++){
+    portfolioItem[i].onclick = function (){
+      let portfolioItemHover = portfolioItem[i].querySelector('.mywork-item-content');
+      portfolioItemHover.style.transform = 'translate3d(0, 0, 0) scaleY(1)';
+      portfolioItemHover.style.opacity = '1';
+    };
+  }
 }
+
+
