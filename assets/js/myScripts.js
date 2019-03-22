@@ -46,7 +46,7 @@ function takeLink () {
 takeLink ();
 
 // фикс бага ховера на айфон
-if(~['Android', 'iPhone', 'iPod', 'iPad', 'BlackBerry'].indexOf(navigator.platform)){
+if(window.innerWidth < 576){
   let portfolioItem = document.querySelectorAll('.mywork-item');
   for (let i =0;i<portfolioItem.length; i++){
     portfolioItem[i].onclick = function (){
@@ -56,5 +56,4 @@ if(~['Android', 'iPhone', 'iPod', 'iPad', 'BlackBerry'].indexOf(navigator.platfo
     };
   }
 }
-
 
